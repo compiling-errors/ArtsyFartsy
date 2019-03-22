@@ -3,7 +3,7 @@ https://hackmd.io/B6U3hn3cQC-h_YGBsA_4Hg
 Group Project - README Template
 ===
 
-# APP_NAME_HERE
+# Artsy Fartsy
 
 ## Table of Contents
 1. [Overview](#Overview)
