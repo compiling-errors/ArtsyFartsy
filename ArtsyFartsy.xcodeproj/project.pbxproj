@@ -10,10 +10,10 @@
 		AC0095F622445B0800D20705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0095F522445B0800D20705 /* AppDelegate.swift */; };
 		AC0095F822445B0800D20705 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0095F722445B0800D20705 /* ViewController.swift */; };
 		AC0095FB22445B0800D20705 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0095F922445B0800D20705 /* Main.storyboard */; };
-		AC0095FD22445B0800D20705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0095FC22445B0800D20705 /* Assets.xcassets */; };
 		AC00960022445B0800D20705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0095FE22445B0800D20705 /* LaunchScreen.storyboard */; };
 		AC00960B22445B0900D20705 /* ArtsyFartsyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00960A22445B0900D20705 /* ArtsyFartsyTests.swift */; };
 		AC00961622445B0900D20705 /* ArtsyFartsyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00961522445B0900D20705 /* ArtsyFartsyUITests.swift */; };
+		AC009624224483B500D20705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0095FC22445B0800D20705 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,7 @@
 		AC0095F522445B0800D20705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC0095F722445B0800D20705 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC0095FA22445B0800D20705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AC0095FC22445B0800D20705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC0095FC22445B0800D20705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = /Users/5005575921/Desktop/ArtsyFartsy/ArtsyFartsy/ArtsyFartsy/Assets.xcassets; sourceTree = "<absolute>"; };
 		AC0095FF22445B0800D20705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC00960122445B0800D20705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC00960622445B0900D20705 /* ArtsyFartsyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtsyFartsyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC00960022445B0800D20705 /* LaunchScreen.storyboard in Resources */,
-				AC0095FD22445B0800D20705 /* Assets.xcassets in Resources */,
+				AC009624224483B500D20705 /* Assets.xcassets in Resources */,
 				AC0095FB22445B0800D20705 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
