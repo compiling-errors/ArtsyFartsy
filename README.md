@@ -1,5 +1,3 @@
-https://hackmd.io/B6U3hn3cQC-h_YGBsA_4Hg
-
 Group Project - README Template
 ===
 
@@ -13,16 +11,16 @@ Group Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+This app gives a daily drawing prompt, and allows user artwork to be uploaded, shared, and commented on.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:**Art / Social Networking
+- **Mobile:**The primary function of this app is to run iOS devices. An optimal interface can be created for computer usage.
+- **Story:**A new prompt is given daily for the purpose of encouraging the user to create, post, and share personal artwork. The drawing feed allows for messaging between other users.
+- **Market:**This app may interest casual users, to pass time and interact with other users, or hardcore artists who wish to promote their work.
+- **Habit:**With a new daily drawing prompt, this app can be accessed daily to post, view, and comment on new artwork.
+- **Scope:**This app will serve as a platform to encourage sharing and commenting on artwork. Possible updates could include monetization to allow users to purchase custom artwork or products for sale by the artist.
 
 ## Product Spec
 
@@ -30,43 +28,66 @@ Group Project - README Template
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* A new account can be created
+* Login for account access
+* Daily art prompt
+* Artwork can be uploaded to the general feed
+* Comments can be left on artwork
+* Customizable app settings
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Customizable user profile page
+* Friend list
+* Chat with other users
+* Search for artwork
+* Favorite artwork to find it quickly
+* Featured artwork page
+* Monetization
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login Screen: -Log into account
+* Register Screen: -Create new account
+* Artwork Feed Screen: -Shows currently posted artwork
+                    * -Comments can be left on posted artwork
+* Daily Prompt Screen: - User can view daily art prompt
+* Upload Artwork Screen: -User can upload art work to post it to the artwork feed
+* Settings Screen: -Customize app settings:
+                    +dark/light theme
+                    +notification settings
+* Profile Screen: -User can change profile picture
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Artwork feed
+* Daily prompt
+* Profile account page
+
+Optional:
+
+* Profile
+* Featured artwork
+* Friend list
+* Commission postings feed
+* Chat/Friends List
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Flow Navigation (Screen to Screen)
+* Login Screen: -Goes to artwork feed
+* Register Screen: -Goes to artwork feed
+* Artwork Feed Screen: -View posted artwork from users (Detail Screen)
+* Daily Prompt Screen: -View daily art prompt (Detail Screen)
+* Upload Artwork Screen: -Goes to artwork feed
+* Settings Screen: -View settings page(Detail Screen)
+* Profile Screen: -View profile page(Detail Screen)
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://github.com/compiling-errors/ArtsyFartsy/blob/master/Wireframe.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
