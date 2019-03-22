@@ -1,6 +1,4 @@
-https://hackmd.io/B6U3hn3cQC-h_YGBsA_4Hg
-
-Group Project - README Template
+Group Project - Compiling Errors
 ===
 
 # Artsy Fartsy
@@ -90,7 +88,9 @@ Optional:
 ## Wireframes
 <img src="https://github.com/compiling-errors/ArtsyFartsy/blob/master/Wireframe.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
+### Digital Wireframes & Mockups
+https://www.figma.com/file/W3SFBGtTPcDWg3Xs7BFgBPKl/ArtsyFartsy?node-id=0%3A1 
+
 
 ### [BONUS] Interactive Prototype
 
