@@ -86,7 +86,6 @@ Optional:
 * Profile Screen: -View profile page(Detail Screen)
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
 <img src="https://github.com/compiling-errors/ArtsyFartsy/blob/master/Wireframe.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
