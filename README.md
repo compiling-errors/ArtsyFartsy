@@ -3,7 +3,7 @@ https://hackmd.io/B6U3hn3cQC-h_YGBsA_4Hg?both#Wireframes
 Group Project - Compiling Errors
 ===
 
-# Artsy Fartsy
+# Artsy Prompts
 
 ## Table of Contents
 1. [Overview](#Overview)
