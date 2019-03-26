@@ -17,12 +17,12 @@ This app gives a daily drawing prompt, and allows user artwork to be uploaded, s
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**Art / Social Networking
-- **Mobile:**The primary function of this app is to run iOS devices. An optimal interface can be created for computer usage.
-- **Story:**A new prompt is given daily for the purpose of encouraging the user to create, post, and share personal artwork. The drawing feed allows for messaging between other users.
-- **Market:**This app may interest casual users, to pass time and interact with other users, or hardcore artists who wish to promote their work.
-- **Habit:**With a new daily drawing prompt, this app can be accessed daily to post, view, and comment on new artwork.
-- **Scope:**This app will serve as a platform to encourage sharing and commenting on artwork. Possible updates could include monetization to allow users to purchase custom artwork or products for sale by the artist.
+**Category:**Art / Social Networking
+**Mobile:**The primary function of this app is to run on iOS devices. Thus, the artwork images would be best viewed from a mobile device. With postings made in real-time and images uploaded directly from a mobile camera, this interface is specifically formatted for the average mobile user. A separate, optimal interface can be created for computer usage.
+**Story:**A new prompt is given daily for the purpose of encouraging the user to create, post, and share personal artwork. The drawing feed allows for messaging between other users. Like many other social media sites, daily updated material and a platform to chat with other users encourages frequent use.
+**Market:**This app may interest any casual phone app user, to pass time and interact with other users, or hardcore artists who wish to promote their work.
+**Habit:**With a new daily drawing prompt, this app encourages daily access to post, view, and comment on new artwork.
+**Scope:**This app will serve as a general platform to encourage sharing and commenting on artwork. This idea is centered around an artwork feed, with the potential to continue adding many optional features. Possible updates could include monetization to allow users to purchase custom artwork or products for sale by the artist.
 
 ## Product Spec
 
