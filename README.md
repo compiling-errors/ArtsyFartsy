@@ -94,7 +94,7 @@ Optional:
 * Profile Screen: -View profile page(Detail Screen)
 
 ## Wireframes
-<img src="https://github.com/compiling-errors/ArtsyFartsy/blob/master/Wireframe.png" width=600>
+<img src="https://github.com/compiling-errors/ArtsyPrompts/blob/master/Wireframe%20for%20group%20project_edited.jpg" width=600>
 
 ### Digital Wireframes & Mockups
 https://www.figma.com/file/W3SFBGtTPcDWg3Xs7BFgBPKl/ArtsyFartsy?node-id=0%3A1 
