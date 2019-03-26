@@ -17,6 +17,7 @@ This app gives a daily drawing prompt, and allows user artwork to be uploaded, s
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
+
 **Category:**Art / Social Networking
 
 **Mobile:**The primary function of this app is to run on iOS devices. Thus, the artwork images would be best viewed from a mobile device. With postings made in real-time and images uploaded directly from a mobile camera, this interface is specifically formatted for the average mobile user. A separate, optimal interface can be created for computer usage.
