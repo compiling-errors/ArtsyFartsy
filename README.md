@@ -105,7 +105,28 @@ https://www.figma.com/file/W3SFBGtTPcDWg3Xs7BFgBPKl/ArtsyFartsy?node-id=0%3A1
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+Model: Artwork Post
+
+Property	        Type	    Description
+..................................................................
+artworkPostId	    String	    user post’s unique id
+
+author	Pointer     to User	    Author of post (image/comment)
+
+artworkImage	    File	    User uploaded artwork image
+
+artworkDescription	String	    User written description of personal 
+                                artwork post
+                                
+numberOfComments	Number	    Any/all comments posted on user’s 
+                                artwork post
+                                
+artworkCaption	    String	    User written caption for artwork
+
+profileImage	    File	    User uploaded profile image
+
+artworkFeed	        Array	    User uploaded artwork posts
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
