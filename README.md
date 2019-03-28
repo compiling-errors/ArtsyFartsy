@@ -109,6 +109,7 @@ Model: Artwork Post
 
 Property	        Type	    Description
 ..................................................................
+
 artworkPostId	    String	    user post’s unique id
 
 author	Pointer     to User	    Author of post (image/comment)
