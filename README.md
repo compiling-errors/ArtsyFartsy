@@ -28,7 +28,7 @@ This app gives a daily drawing prompt, and allows user artwork to be uploaded, s
 
 **Habit:**With a new daily drawing prompt, this app encourages daily access to post, view, and comment on new artwork.
 
-**Scope:**This app will serve as a general platform to encourage sharing and commenting on artwork. This idea is centered around an artwork feed, with the potential to continue adding many optional features. Possible updates could include monetization to allow users to purchase custom artwork or products for sale by the artist.
+**Scope:**This app will serve as a general platform to encourage sharing and commenting on artwork. This idea is centered around an artwork feed, with the potential to continue adding many optional features. Possible updates could include monetization to allow users to purchase custom artwork or products for sale by the artist. Additional chatting/friends list features can also be added to allow for a more user friendly chat interface. However, these optional features may prove challenging to execute.
 
 ## Product Spec
 
