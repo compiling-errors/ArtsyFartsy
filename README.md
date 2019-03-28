@@ -105,7 +105,10 @@ https://www.figma.com/file/W3SFBGtTPcDWg3Xs7BFgBPKl/ArtsyFartsy?node-id=0%3A1
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-
+| Left-aligned | Left-aligned | Left-aligned |
+| :---         |:---            |:---           |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
 
 ### Networking
 - [Add list of network requests by screen ]
