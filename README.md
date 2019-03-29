@@ -119,6 +119,7 @@ Model: Artwork Post
 |profileImage	      |File	               |User uploaded profile image                      |
 |artworkFeed	      |Array	             |User uploaded artwork posts                      |
 
+
 Model: Account
 
 | Property          | Type               | Description                                     |
@@ -126,6 +127,7 @@ Model: Account
 |username           | String             |  User’s username                                |
 |password	          |String	             |User’s password                                  |
 |email	            |String	             |User’s email address                             |
+
 
 Model: Daily Prompt Page
 
@@ -135,6 +137,7 @@ Model: Daily Prompt Page
 |promptAdjective	  |JSON Object	       |An adjective pulled from a source drawing prompt |                                 
 |promptNoun	        |JSON Object	       |A noun pulled from a source for a drawing prompt |                            
 |promptVerb	        |JSON Object	       |A verb pulled from a source for a drawing prompt |                                  
+
 
 Model: Request Post
 
