@@ -164,8 +164,8 @@ Model: Individual User's Followed Feed
 |lastArtworkImage   |File                |Followed user's last artwork post                |
 |followedFeed	      |Array	             |User's list of followed users                    |
 |followedDate	      |DateTime            |When user has followed another user              |
-|followedUser       |Pointer to User     |User that individual user has followed           |
-
+|followedList       |Array               |User's followed list                             |
+  
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
