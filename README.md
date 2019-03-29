@@ -151,6 +151,7 @@ Model: Request Post
 |requestCaption	    |String	             |User written caption for request                 |
 |profileImage	      |File	               |User uploaded profile image                      |
 |requestFeed	      |Array	             |User uploaded request posts                      |
+|requestDate	      |DateTime            |When user has posted/updated a request post      |
 
 ### Networking
 - [Add list of network requests by screen ]
