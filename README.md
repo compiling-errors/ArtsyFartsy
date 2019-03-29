@@ -114,7 +114,7 @@ Model: Artwork Post
 |author             |Pointer to User     |Author of post (image/comment)                   |
 |artworkImage	      |File	               |User uploaded artwork image                      |
 |artworkDescription	|String	             |User written description of personal artwork post|
-|numberOfComments	  |Number	             |Any/all comments posted on user’s artwork post   |
+|numComments	      |Number	             |Any/all comments posted on user’s artwork post   |
 |artworkCaption	    |String	             |User written caption for artwork                 |
 |profileImage	      |File	               |User uploaded profile image                      |
 |artworkFeed	      |Array	             |User uploaded artwork posts                      |
@@ -129,12 +129,22 @@ Model: Account
 
 Model: Daily Prompt Page
 
-Property	Type	Description
-
-followedProfile    	Pointer to User	    A profile/account that a user is                                                 following
-promptAdjective	    JSON Object	        An adjective pulled from a source                                             for a drawing prompt
-promptNoun	        JSON Object	        A noun pulled from a source for a                                             drawing prompt
-promptVerb	        JSON Object	        A verb pulled from a source for a                                                 drawing prompt
+|Property	          |Type	               |Description                                      |
+| :---              |:---                |:---                                             |
+|followedProfile    |Pointer to User	   |A profile/account that a user is following       |                                 
+|promptAdjective	  |JSON Object	       |An adjective pulled from a source drawing prompt |                                 
+|promptNoun	        |JSON Object	       |A noun pulled from a source for a drawing prompt |                            
+|promptVerb	        |JSON Object	       |A verb pulled from a source for a drawing prompt |                                             
+Model: Request Post
+|Property	          |Type	               |Description                                      |
+| :---              |:---                |:---                                             |
+|requestPostId	    |String	             |user post’s unique id                            |
+|author	            |Pointer to User	   |Author of post (image/comment)                   |
+|requestDescription	|String	             |User written description of request post         |                                
+|requestNumComments	|Number	             |Any/all comments posted on user’s artwork post   |
+|requestCaption	    |String	             |User written caption for request                 |
+|profileImage	      |File	               |User uploaded profile image                      |
+|requestFeed	      |Array	             |User uploaded request posts                      |
 
 ### Networking
 - [Add list of network requests by screen ]
