@@ -134,7 +134,8 @@ Model: Daily Prompt Page
 |followedProfile    |Pointer to User	   |A profile/account that a user is following       |                                 
 |promptAdjective	  |JSON Object	       |An adjective pulled from a source drawing prompt |                                 
 |promptNoun	        |JSON Object	       |A noun pulled from a source for a drawing prompt |                            
-|promptVerb	        |JSON Object	       |A verb pulled from a source for a drawing prompt |                                             
+|promptVerb	        |JSON Object	       |A verb pulled from a source for a drawing prompt |                                  
+
 Model: Request Post
 
 |Property	          |Type	               |Description                                      |
