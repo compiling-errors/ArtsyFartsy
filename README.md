@@ -153,6 +153,18 @@ Model: Request Post
 |requestFeed	      |Array	             |User uploaded request posts                      |
 |requestDate	      |DateTime            |When user has posted/updated a request post      |
 
+
+
+Model: Individual User's Followed Feed
+
+|Property	          |Type	               |Description                                      |
+|:---               |:---                |:---                                             |
+|username	          |Pointer to User	   |Author of post (image/comment)                   |
+|profileImage	      |File	               |User uploaded profile image                      |
+|lastArtworkImage   |File                |Followed user's last artwork post                |
+|followedFeed	      |Array	             |User's list of followed users                    |
+|followedDate	      |DateTime            |When user has followed another user              |
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
