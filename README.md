@@ -109,7 +109,7 @@ https://www.figma.com/file/W3SFBGtTPcDWg3Xs7BFgBPKl/ArtsyFartsy?node-id=0%3A1
 Model: Artwork Post
 
 | Property          | Type               | Description                                     |
-| :---              |:---                |:---                                             |
+|:---               |:---                |:---                                             |
 |artworkPostId      |String              |user post’s unique id                            |
 |author             |Pointer to User     |Author of post (image/comment)                   |
 |artworkImage	      |File	               |User uploaded artwork image                      |
@@ -122,7 +122,7 @@ Model: Artwork Post
 Model: Account
 
 | Property          | Type               | Description                                     |
-| :---              |:---                |:---                                             |
+|:---               |:---                |:---                                             |
 |username           | String             |  User’s username                                |
 |password	          |String	             |User’s password                                  |
 |email	            |String	             |User’s email address                             |
@@ -130,14 +130,15 @@ Model: Account
 Model: Daily Prompt Page
 
 |Property	          |Type	               |Description                                      |
-| :---              |:---                |:---                                             |
+|:---               |:---                |:---                                             |
 |followedProfile    |Pointer to User	   |A profile/account that a user is following       |                                 
 |promptAdjective	  |JSON Object	       |An adjective pulled from a source drawing prompt |                                 
 |promptNoun	        |JSON Object	       |A noun pulled from a source for a drawing prompt |                            
 |promptVerb	        |JSON Object	       |A verb pulled from a source for a drawing prompt |                                             
 Model: Request Post
+
 |Property	          |Type	               |Description                                      |
-| :---              |:---                |:---                                             |
+|:---               |:---                |:---                                             |
 |requestPostId	    |String	             |user post’s unique id                            |
 |author	            |Pointer to User	   |Author of post (image/comment)                   |
 |requestDescription	|String	             |User written description of request post         |                                
