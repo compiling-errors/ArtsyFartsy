@@ -118,6 +118,7 @@ Model: Artwork Post
 |artworkCaption	    |String	             |User written caption for artwork                 |
 |profileImage	      |File	               |User uploaded profile image                      |
 |artworkFeed	      |Array	             |User uploaded artwork posts                      |
+|artworkDate	      |DateTime            |When user has posted/updated an artwork post     |
 
 
 Model: Account
