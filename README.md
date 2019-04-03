@@ -306,7 +306,23 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
 ```
 **Settings**
 - (Update/PUT) Change the user’s username, password, email
- 
+ let query = PFQuery(className: "usersettings")
+    query.whereKey("username" , equalTo: username)
+    query.findObjectsInBackground { (username: [PFObject]?, error: Error?) in
+       if let error = error { 
+            print(error.localizedDescription)
+       } 
+       else if let username = username {
+            let gender = UserDefaults.standard.string(forKey: "gender")
+            let email = UserDefaults.standard.string(forKey: "email")
+            let password = UserDefaults.standard.string(forKey: "password")
+            genderLabel.text = gender
+            passLabel.text = password
+            emailLabel.text = email
+            print("Successfully changed settings.")
+          // TODO: Do something with users...
+       }
+    }
 
 **Following Page**
 - (READ/GET) Shows the user’s followed accounts artwork as a feed
