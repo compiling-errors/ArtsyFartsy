@@ -226,6 +226,37 @@ class LoginViewController: UIViewController {
     }
 ```
 - (UPDATE/PUT) Follow button - updates followed list
+```swift
+
+//Follow a user
+let selectedUser = ...
+
+//Make an entry in table ("Following")
+let follow = PFObject(className: "Following")
+follow.setObject(PFUser.currentUser()!, forKey: "from")
+follow.setObject(otherUser, forKey: "to")
+follow.setObject(NSDate(), forKey: "followDate")
+follow.saveInBackground()
+
+//Query to find all of the users that the current user followed/favorited (list)
+
+let query = PFQuery(className: "Following")
+query.whereKey("from", equalTo: PFUser.currentUser()!)
+
+query.findObjectsInBackgroundWithBlock{
+	(objects: [AnyObject]?, error: NSError?) -> Void in
+    if let objects = objects {
+        for entry in objects {
+            let selectedUser = entry.objectForKey("to") as? PFUser
+
+            //When the user was followed
+            let when = entry.objectForKey("followDate") as? PFObject
+        }
+    }
+}
+
+
+```
 
 **Drawing Submission Page** - **Profile Photo**
 - (CREATE/POST) Post the users completed artwork
