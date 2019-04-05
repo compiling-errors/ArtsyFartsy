@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0886856E2256EAFB00C1292B /* ArtworkFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0886856D2256EAFB00C1292B /* ArtworkFeedViewController.swift */; };
+		088685702256F4C200C1292B /* ArtworkPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0886856F2256F4C200C1292B /* ArtworkPostCell.swift */; };
+		088685722256F57E00C1292B /* ArtworkUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088685712256F57E00C1292B /* ArtworkUploadViewController.swift */; };
+		088685742256FAD600C1292B /* ComissionPromptFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088685732256FAD600C1292B /* ComissionPromptFeedViewController.swift */; };
+		088685762256FED100C1292B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088685752256FED100C1292B /* SettingsViewController.swift */; };
+		088685782256FFD200C1292B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088685772256FFD200C1292B /* AccountViewController.swift */; };
 		AC0095F622445B0800D20705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0095F522445B0800D20705 /* AppDelegate.swift */; };
 		AC0095F822445B0800D20705 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0095F722445B0800D20705 /* ViewController.swift */; };
 		AC0095FB22445B0800D20705 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0095F922445B0800D20705 /* Main.storyboard */; };
@@ -34,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0886856D2256EAFB00C1292B /* ArtworkFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkFeedViewController.swift; sourceTree = "<group>"; };
+		0886856F2256F4C200C1292B /* ArtworkPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkPostCell.swift; sourceTree = "<group>"; };
+		088685712256F57E00C1292B /* ArtworkUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkUploadViewController.swift; sourceTree = "<group>"; };
+		088685732256FAD600C1292B /* ComissionPromptFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComissionPromptFeedViewController.swift; sourceTree = "<group>"; };
+		088685752256FED100C1292B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		088685772256FFD200C1292B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		AC0095F222445B0800D20705 /* ArtsyFartsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtsyFartsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0095F522445B0800D20705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC0095F722445B0800D20705 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +110,12 @@
 			isa = PBXGroup;
 			children = (
 				AC0095F522445B0800D20705 /* AppDelegate.swift */,
+				0886856D2256EAFB00C1292B /* ArtworkFeedViewController.swift */,
+				088685752256FED100C1292B /* SettingsViewController.swift */,
+				088685772256FFD200C1292B /* AccountViewController.swift */,
+				088685732256FAD600C1292B /* ComissionPromptFeedViewController.swift */,
+				0886856F2256F4C200C1292B /* ArtworkPostCell.swift */,
+				088685712256F57E00C1292B /* ArtworkUploadViewController.swift */,
 				AC0095F722445B0800D20705 /* ViewController.swift */,
 				AC0095F922445B0800D20705 /* Main.storyboard */,
 				AC0095FC22445B0800D20705 /* Assets.xcassets */,
@@ -256,8 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088685702256F4C200C1292B /* ArtworkPostCell.swift in Sources */,
+				088685722256F57E00C1292B /* ArtworkUploadViewController.swift in Sources */,
+				088685782256FFD200C1292B /* AccountViewController.swift in Sources */,
+				088685762256FED100C1292B /* SettingsViewController.swift in Sources */,
 				AC0095F822445B0800D20705 /* ViewController.swift in Sources */,
 				AC0095F622445B0800D20705 /* AppDelegate.swift in Sources */,
+				0886856E2256EAFB00C1292B /* ArtworkFeedViewController.swift in Sources */,
+				088685742256FAD600C1292B /* ComissionPromptFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
