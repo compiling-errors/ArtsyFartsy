@@ -305,6 +305,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
 }}
 ```
 **Settings**
+```swift
 - (Update/PUT) Change the user’s username, password, email
  let query = PFQuery(className: "usersettings")
     query.whereKey("username" , equalTo: username)
@@ -323,6 +324,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
           // TODO: Do something with users...
        }
     }
+```
 
 **Following Page**
 - (READ/GET) Shows the user’s followed accounts artwork as a feed
