@@ -1,0 +1,6 @@
+framework module Pods_ArtsyFartsy {
+  umbrella header "Pods-ArtsyFartsy-umbrella.h"
+
+  export *
+  module * { export * }
+}
