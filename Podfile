@@ -6,6 +6,8 @@ target 'ArtsyFartsy' do
   use_frameworks!
 
   # Pods for ArtsyFartsy
+  pod "Parse"
+  pod "AlamofireImage"
 
   target 'ArtsyFartsyTests' do
     inherit! :search_paths
