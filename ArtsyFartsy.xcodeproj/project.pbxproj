@@ -13,7 +13,7 @@
 		088685722256F57E00C1292B /* ArtworkUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088685712256F57E00C1292B /* ArtworkUploadViewController.swift */; };
 		088685742256FAD600C1292B /* ComissionPromptFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088685732256FAD600C1292B /* ComissionPromptFeedViewController.swift */; };
 		088685762256FED100C1292B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088685752256FED100C1292B /* SettingsViewController.swift */; };
-		088685782256FFD200C1292B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088685772256FFD200C1292B /* AccountViewController.swift */; };
+		2AFEA387225CAB94000D1E31 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEA386225CAB94000D1E31 /* LoginPageViewController.swift */; };
 		4A28161862E45D011CBAFF56 /* Pods_ArtsyFartsy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F41FFC8302E01E8F31EDDD9 /* Pods_ArtsyFartsy.framework */; };
 		6421080E69BDADDCC92E33AD /* Pods_ArtsyFartsyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A62B201392471CA178FCC4 /* Pods_ArtsyFartsyTests.framework */; };
 		AC0095F622445B0800D20705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0095F522445B0800D20705 /* AppDelegate.swift */; };
@@ -22,7 +22,6 @@
 		AC00960022445B0800D20705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0095FE22445B0800D20705 /* LaunchScreen.storyboard */; };
 		AC00960B22445B0900D20705 /* ArtsyFartsyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00960A22445B0900D20705 /* ArtsyFartsyTests.swift */; };
 		AC00961622445B0900D20705 /* ArtsyFartsyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00961522445B0900D20705 /* ArtsyFartsyUITests.swift */; };
-		AC009624224483B500D20705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0095FC22445B0800D20705 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +47,10 @@
 		088685712256F57E00C1292B /* ArtworkUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkUploadViewController.swift; sourceTree = "<group>"; };
 		088685732256FAD600C1292B /* ComissionPromptFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComissionPromptFeedViewController.swift; sourceTree = "<group>"; };
 		088685752256FED100C1292B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		088685772256FFD200C1292B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		0E22128FD7245A308403CB0B /* Pods-ArtsyFartsyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtsyFartsyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtsyFartsyTests/Pods-ArtsyFartsyTests.release.xcconfig"; sourceTree = "<group>"; };
 		1FCB180D9234872CA0D91033 /* Pods-ArtsyFartsyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtsyFartsyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtsyFartsyUITests/Pods-ArtsyFartsyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		22D39CA6056AD1DBAE54F84D /* Pods_ArtsyFartsyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtsyFartsyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AFEA386225CAB94000D1E31 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		2F7C670512AAE5D20511DE33 /* Pods-ArtsyFartsy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtsyFartsy.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtsyFartsy/Pods-ArtsyFartsy.release.xcconfig"; sourceTree = "<group>"; };
 		5D183A3F3080837C62B4E1CA /* Pods-ArtsyFartsyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtsyFartsyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtsyFartsyUITests/Pods-ArtsyFartsyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5F41FFC8302E01E8F31EDDD9 /* Pods_ArtsyFartsy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtsyFartsy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +59,6 @@
 		AC0095F522445B0800D20705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC0095F722445B0800D20705 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC0095FA22445B0800D20705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AC0095FC22445B0800D20705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = /Users/5005575921/Desktop/ArtsyFartsy/ArtsyFartsy/ArtsyFartsy/Assets.xcassets; sourceTree = "<absolute>"; };
 		AC0095FF22445B0800D20705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC00960122445B0800D20705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC00960622445B0900D20705 /* ArtsyFartsyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtsyFartsyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,13 +137,12 @@
 				AC0095F522445B0800D20705 /* AppDelegate.swift */,
 				0886856D2256EAFB00C1292B /* ArtworkFeedViewController.swift */,
 				088685752256FED100C1292B /* SettingsViewController.swift */,
-				088685772256FFD200C1292B /* AccountViewController.swift */,
 				088685732256FAD600C1292B /* ComissionPromptFeedViewController.swift */,
 				0886856F2256F4C200C1292B /* ArtworkPostCell.swift */,
+				2AFEA386225CAB94000D1E31 /* LoginPageViewController.swift */,
 				088685712256F57E00C1292B /* ArtworkUploadViewController.swift */,
 				AC0095F722445B0800D20705 /* ViewController.swift */,
 				AC0095F922445B0800D20705 /* Main.storyboard */,
-				AC0095FC22445B0800D20705 /* Assets.xcassets */,
 				AC0095FE22445B0800D20705 /* LaunchScreen.storyboard */,
 				AC00960122445B0800D20705 /* Info.plist */,
 			);
@@ -292,7 +289,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC00960022445B0800D20705 /* LaunchScreen.storyboard in Resources */,
-				AC009624224483B500D20705 /* Assets.xcassets in Resources */,
 				AC0095FB22445B0800D20705 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +385,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ArtsyFartsy/Pods-ArtsyFartsy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 			);
@@ -396,6 +394,8 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 			);
@@ -413,7 +413,7 @@
 			files = (
 				088685702256F4C200C1292B /* ArtworkPostCell.swift in Sources */,
 				088685722256F57E00C1292B /* ArtworkUploadViewController.swift in Sources */,
-				088685782256FFD200C1292B /* AccountViewController.swift in Sources */,
+				2AFEA387225CAB94000D1E31 /* LoginPageViewController.swift in Sources */,
 				088685762256FED100C1292B /* SettingsViewController.swift in Sources */,
 				AC0095F822445B0800D20705 /* ViewController.swift in Sources */,
 				AC0095F622445B0800D20705 /* AppDelegate.swift in Sources */,
@@ -594,6 +594,7 @@
 			baseConfigurationReference = A9978912165A6916EB915338 /* Pods-ArtsyFartsy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ArtsyFartsy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -612,6 +613,7 @@
 			baseConfigurationReference = 2F7C670512AAE5D20511DE33 /* Pods-ArtsyFartsy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ArtsyFartsy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
