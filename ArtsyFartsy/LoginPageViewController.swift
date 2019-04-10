@@ -29,8 +29,7 @@ class LoginPageViewController: UIViewController {
         PFUser.logInWithUsername(inBackground: username, password: password)
         {(user, error) in
             if user != nil {
-                self.performSegue(withIdentifier: "loginAppSegue", sender: nil)
-
+                self.performSegue(withIdentifier: "TabBarSegue", sender: nil)
             } else {
                 print("Error: \(error?.localizedDescription)")
             }
@@ -45,7 +44,7 @@ class LoginPageViewController: UIViewController {
         
         user.signUpInBackground { (success, error) in
             if success {
-                self.performSegue(withIdentifier: "loginAppSegue", sender: nil)
+                self.performSegue(withIdentifier: "TabBarSegue", sender: nil)
             } else {
                 print("Error: \(error?.localizedDescription)")
             }
