@@ -32,6 +32,15 @@ class LoginPageViewController: UIViewController {
                 self.performSegue(withIdentifier: "TabBarSegue", sender: nil)
             } else {
                 print("Error: \(error?.localizedDescription)")
+                
+                //Show an error message to user at failed login attempt
+                let alertView = UIAlertView(
+                   title: "Error",
+                   message: "Invalid username and/or password. Please try again.",
+                   delegate: nil,
+                   cancelButtonTitle: "OK"
+                 )
+                 alertView.show()
             }
         }
     }
