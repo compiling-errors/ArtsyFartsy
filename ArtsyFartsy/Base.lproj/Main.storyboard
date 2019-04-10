@@ -13,7 +13,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="UZe-IN-z9B">
             <objects>
-                <tabBarController id="05Y-cw-U4J" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="05Y-cw-U4J" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wlJ-LT-Vcd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -31,7 +31,7 @@
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginPageViewController" customModule="ArtsyFartsy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginPageViewController" customModule="ArtsyFartsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,17 +116,23 @@
             </objects>
             <point key="canvasLocation" x="-2200" y="1487"/>
         </scene>
-        <!--View Controller-->
+        <!--Artwork Feed View Controller-->
         <scene sceneID="A6A-8N-DTi">
             <objects>
-                <viewController id="l1N-ZL-xN9" sceneMemberID="viewController">
+                <viewController id="l1N-ZL-xN9" customClass="ArtworkFeedViewController" customModule="ArtsyFartsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Dv-3N-z2i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tmb-Ky-kiF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="v9w-n9-2Le"/>
+                    <navigationItem key="navigationItem" id="v9w-n9-2Le">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="T2L-cK-fz4">
+                            <connections>
+                                <action selector="logoutButton:" destination="l1N-ZL-xN9" id="dYp-6F-ZUs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ktx-M4-n5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
