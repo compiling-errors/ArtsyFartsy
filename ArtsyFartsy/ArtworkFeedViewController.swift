@@ -2,7 +2,7 @@
 //  ArtworkFeedViewController.swift
 //  ArtsyFartsy
 //
-//  Created by Tiny on 4/9/19.
+//  Created by Tiny on 4/10/19.
 //  Copyright © 2019 MICHAEL BENTON. All rights reserved.
 //
 
@@ -11,21 +11,20 @@ import Parse
 import AlamofireImage
 
 class ArtworkFeedViewController: UIViewController {
-    
-    //Allow user to logout from artwork feed screen
+
     @IBAction func logoutButton(_ sender: Any) {
         PFUser.logOut()
         
         let main = UIStoryboard(name: "Main", bundle: nil)
-        let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
+        let loginPageViewController = main.instantiateViewController(withIdentifier: "LoginPageViewController")
         
         //Access the delegate for use
         let delegate = UIApplication.shared.delegate as! AppDelegate
         
-        delegate.window?.rootViewController = loginViewController
+        delegate.window?.rootViewController = loginPageViewController
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
