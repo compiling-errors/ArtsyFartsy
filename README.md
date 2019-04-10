@@ -30,8 +30,8 @@ This app gives a daily drawing prompt, and allows user artwork to be uploaded, s
 
 **Required Must-have Stories**
 
-- [x] * A new account can be created
-- [x] * Login for account access
+- [x] A new account can be created
+- [x] Login for account access
 * Daily art prompt
 * Artwork can be uploaded to the general feed
 * Likes/feedback can be left on artwork
