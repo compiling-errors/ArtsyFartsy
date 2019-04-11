@@ -10,7 +10,9 @@ import UIKit
 
 class ArtworkPostCell: UITableViewCell {
 
-    //Outlets need to be placed here
+
+    @IBOutlet weak var artworkImgView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
