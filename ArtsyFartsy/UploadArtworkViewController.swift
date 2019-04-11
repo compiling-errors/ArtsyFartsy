@@ -24,7 +24,48 @@ class UploadArtworkViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func postButton(_ sender: Any) {
+        //Create new object
+        let artworkPost = PFObject(className: "ArtworkPosts")
+        //Create dictionary
+        //If you add stuff later, things will be nil: must handle this or delete table and start over again
+        artworkPost["name"] = artworkName.text!
+        artworkPost["moreinfo"] = artworkMoreInfo.text!
+        artworkPost["author"] = PFUser.current()!
         
+        //Saved in a separate table for my photos
+        let imageData = artworkImgView.image!.pngData()
+        let file = PFFileObject(data: imageData!)
+        
+        //This column has url
+        artworkPost["image"] = file
+        
+        artworkPost.saveInBackground { (success, error) in
+            if success{
+                self.dismiss(animated: true, completion: nil)
+                print("Saved artwork post!")
+                
+                //Show a success message to user
+                let alertView = UIAlertView(
+                    title: "Post Complete",
+                    message: "Success! Artwork posted to public feed.",
+                    delegate: nil,
+                    cancelButtonTitle: "OK"
+                )
+                alertView.show()
+                
+            } else {
+                print("Error! Unable to save artwork post.")
+                
+                //Show an error message to user
+                let alertView = UIAlertView(
+                    title: "Error",
+                    message: "Unable to post artwork. Please try again.",
+                    delegate: nil,
+                    cancelButtonTitle: "OK"
+                )
+                alertView.show()
+            }
+        }
     }
     
     @IBAction func uploadArtworkTapButton(_ sender: Any) {
