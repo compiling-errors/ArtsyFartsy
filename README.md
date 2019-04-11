@@ -5,7 +5,13 @@ Group Project - Compiling Errors
 
 Sprint 1 Build Progress Gifs:
 
+1) 
 <img src='http://g.recordit.co/JCMX47PgyO.gif' />
+
+Created with: recordit.co
+
+2) 
+<img src='' />
 
 Created with: recordit.co
 
