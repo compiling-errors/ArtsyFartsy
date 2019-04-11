@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,7 +36,7 @@
             <objects>
                 <viewController storyboardIdentifier="LoginPageViewController" id="BYZ-38-t0r" customClass="LoginPageViewController" customModule="ArtsyFartsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="IOR-Qf-GmX">
@@ -104,7 +108,7 @@
             <objects>
                 <viewController id="t54-WT-eBt" customClass="UploadArtworkViewController" customModule="ArtsyFartsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xrR-zg-N7l">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfa-fw-k3U">
@@ -184,8 +188,54 @@
             <objects>
                 <viewController id="LHo-sw-mjx" customClass="ArtworkFeedViewController" customModule="ArtsyFartsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q6M-Qc-gre">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mks-1Z-Lho">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtworkPostCell" rowHeight="180" id="JZJ-QF-i8q" customClass="ArtworkPostCell" customModule="ArtsyFartsy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JZJ-QF-i8q" id="WcM-Vx-8Tz">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e6I-CM-lm2">
+                                                    <rect key="frame" x="135" y="0.0" width="240" height="175"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="240" id="AdE-Fm-sUK"/>
+                                                        <constraint firstAttribute="height" constant="175" id="f6O-Fe-o4n"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rib-WJ-Jul">
+                                                    <rect key="frame" x="34.5" y="125" width="78.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="e6I-CM-lm2" secondAttribute="trailing" id="0dY-qa-h6b"/>
+                                                <constraint firstItem="e6I-CM-lm2" firstAttribute="top" secondItem="WcM-Vx-8Tz" secondAttribute="top" id="1P1-18-o4u"/>
+                                                <constraint firstAttribute="bottom" secondItem="e6I-CM-lm2" secondAttribute="bottom" constant="4.5" id="2J9-tY-CDv"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Rib-WJ-Jul" secondAttribute="bottom" constant="23" id="95h-tF-xYP"/>
+                                                <constraint firstItem="Rib-WJ-Jul" firstAttribute="top" secondItem="WcM-Vx-8Tz" secondAttribute="topMargin" constant="114" id="hef-tV-9NH"/>
+                                                <constraint firstItem="e6I-CM-lm2" firstAttribute="leading" secondItem="Rib-WJ-Jul" secondAttribute="trailing" constant="22" id="mpL-dV-Pni"/>
+                                                <constraint firstItem="Rib-WJ-Jul" firstAttribute="leading" secondItem="WcM-Vx-8Tz" secondAttribute="leadingMargin" constant="19.5" id="oS4-Il-Lws"/>
+                                                <constraint firstItem="e6I-CM-lm2" firstAttribute="leading" secondItem="Rib-WJ-Jul" secondAttribute="trailing" constant="22" id="zgI-TU-e9X"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artworkImgView" destination="e6I-CM-lm2" id="JMO-1w-GaB"/>
+                                            <outlet property="usernameLabel" destination="Rib-WJ-Jul" id="9QX-nx-ZX4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Yap-tA-Pd5"/>
                     </view>
@@ -196,17 +246,20 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="feedTableView" destination="mks-1Z-Lho" id="GZH-In-LlX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIn-5q-y8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1549" y="1511"/>
+            <point key="canvasLocation" x="-1549.5999999999999" y="1510.7946026986508"/>
         </scene>
         <!--Drawing Prompt Page-->
         <scene sceneID="A6A-8N-DTi">
             <objects>
                 <viewController id="l1N-ZL-xN9" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Dv-3N-z2i">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tmb-Ky-kiF"/>
@@ -223,7 +276,7 @@
                 <navigationController id="DPS-dm-m49" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="PVN-1N-ABN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F8z-M7-pLo">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -240,7 +293,7 @@
                 <navigationController id="d0c-IW-vsG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="IpS-PL-tV8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="95y-ZN-Cgu">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -257,7 +310,7 @@
                 <navigationController id="cIc-Y4-phO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="8ne-VI-zBM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jUx-Yd-9xF">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -273,7 +326,7 @@
             <objects>
                 <viewController id="Pmd-Cf-g0c" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bYI-gD-9Y8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RBl-jM-KUZ"/>
@@ -289,7 +342,7 @@
             <objects>
                 <viewController id="lsw-HS-Sv9" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2bv-GK-Xpz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="16o-HB-7oJ"/>
@@ -306,7 +359,7 @@
                 <navigationController id="FHR-pl-F32" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="kM0-ge-LnX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BdB-K8-ZHv">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -324,7 +377,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="wYj-4l-KoD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d5X-cW-apw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
