@@ -11,7 +11,7 @@ Sprint 1 Build Progress Gifs:
 Created with: recordit.co
 
 2) 
-<img src='' />
+<img src='http://g.recordit.co/GwJLpvmCgc.gif' />
 
 Created with: recordit.co
 
