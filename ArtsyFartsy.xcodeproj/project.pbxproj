@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		05F439B62C89D1472BBA561F /* Pods_ArtsyFartsyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D39CA6056AD1DBAE54F84D /* Pods_ArtsyFartsyUITests.framework */; };
 		088685702256F4C200C1292B /* ArtworkPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0886856F2256F4C200C1292B /* ArtworkPostCell.swift */; };
-		088685722256F57E00C1292B /* ArtworkUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088685712256F57E00C1292B /* ArtworkUploadViewController.swift */; };
 		088685742256FAD600C1292B /* ComissionPromptFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088685732256FAD600C1292B /* ComissionPromptFeedViewController.swift */; };
 		088685762256FED100C1292B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088685752256FED100C1292B /* SettingsViewController.swift */; };
+		2A1EAA5C225F04970075BF12 /* UploadArtworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1EAA5B225F04970075BF12 /* UploadArtworkViewController.swift */; };
 		2A511334225DD69900D106E9 /* ArtworkFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A511333225DD69900D106E9 /* ArtworkFeedViewController.swift */; };
 		2AFEA387225CAB94000D1E31 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEA386225CAB94000D1E31 /* LoginPageViewController.swift */; };
 		4A28161862E45D011CBAFF56 /* Pods_ArtsyFartsy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F41FFC8302E01E8F31EDDD9 /* Pods_ArtsyFartsy.framework */; };
@@ -43,12 +43,12 @@
 
 /* Begin PBXFileReference section */
 		0886856F2256F4C200C1292B /* ArtworkPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkPostCell.swift; sourceTree = "<group>"; };
-		088685712256F57E00C1292B /* ArtworkUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkUploadViewController.swift; sourceTree = "<group>"; };
 		088685732256FAD600C1292B /* ComissionPromptFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComissionPromptFeedViewController.swift; sourceTree = "<group>"; };
 		088685752256FED100C1292B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0E22128FD7245A308403CB0B /* Pods-ArtsyFartsyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtsyFartsyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtsyFartsyTests/Pods-ArtsyFartsyTests.release.xcconfig"; sourceTree = "<group>"; };
 		1FCB180D9234872CA0D91033 /* Pods-ArtsyFartsyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtsyFartsyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtsyFartsyUITests/Pods-ArtsyFartsyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		22D39CA6056AD1DBAE54F84D /* Pods_ArtsyFartsyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtsyFartsyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A1EAA5B225F04970075BF12 /* UploadArtworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadArtworkViewController.swift; sourceTree = "<group>"; };
 		2A511333225DD69900D106E9 /* ArtworkFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkFeedViewController.swift; sourceTree = "<group>"; };
 		2AFEA386225CAB94000D1E31 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		2F7C670512AAE5D20511DE33 /* Pods-ArtsyFartsy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtsyFartsy.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtsyFartsy/Pods-ArtsyFartsy.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,12 +135,12 @@
 			isa = PBXGroup;
 			children = (
 				AC0095F522445B0800D20705 /* AppDelegate.swift */,
+				2A1EAA5B225F04970075BF12 /* UploadArtworkViewController.swift */,
 				088685752256FED100C1292B /* SettingsViewController.swift */,
 				088685732256FAD600C1292B /* ComissionPromptFeedViewController.swift */,
 				2A511333225DD69900D106E9 /* ArtworkFeedViewController.swift */,
 				0886856F2256F4C200C1292B /* ArtworkPostCell.swift */,
 				2AFEA386225CAB94000D1E31 /* LoginPageViewController.swift */,
-				088685712256F57E00C1292B /* ArtworkUploadViewController.swift */,
 				AC0095F722445B0800D20705 /* ViewController.swift */,
 				AC0095F922445B0800D20705 /* Main.storyboard */,
 				AC0095FE22445B0800D20705 /* LaunchScreen.storyboard */,
@@ -412,12 +412,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				088685702256F4C200C1292B /* ArtworkPostCell.swift in Sources */,
-				088685722256F57E00C1292B /* ArtworkUploadViewController.swift in Sources */,
 				2AFEA387225CAB94000D1E31 /* LoginPageViewController.swift in Sources */,
 				088685762256FED100C1292B /* SettingsViewController.swift in Sources */,
 				AC0095F822445B0800D20705 /* ViewController.swift in Sources */,
 				AC0095F622445B0800D20705 /* AppDelegate.swift in Sources */,
 				088685742256FAD600C1292B /* ComissionPromptFeedViewController.swift in Sources */,
+				2A1EAA5C225F04970075BF12 /* UploadArtworkViewController.swift in Sources */,
 				2A511334225DD69900D106E9 /* ArtworkFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
