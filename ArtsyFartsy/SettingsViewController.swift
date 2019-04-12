@@ -11,8 +11,8 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     //todo connect outlets for switches/buttons and save/submit button
+            //change username, change password, change email, save/submit buttons
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

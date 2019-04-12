@@ -45,6 +45,7 @@ class LoginPageViewController: UIViewController {
         }
     }
     
+    //change to connect to external sign up page
     @IBAction func signUpButton(_ sender: Any) {
         let user = PFUser()
         user.username = usernameField.text
