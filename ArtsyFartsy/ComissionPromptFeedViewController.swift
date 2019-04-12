@@ -7,8 +7,10 @@
 ////
 //
 //import UIKit
+//import Parse
+//import AlamofireImage
 //
-//class ComissionPromptFeedViewController: UIViewController {
+//class ComissionPromptFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //
 //    //todo connect tableview outlet
 //
@@ -16,9 +18,7 @@
 //
 //    //Array of PFObjects, commission prompts
 //    var commissionPrompts = [PFObject]()
-//    var clickedCommissionPrompt: PFObject!
-//
-//     //todo figure out logout button, set on other screens
+////    var clickedCommissionPrompt: PFObject!  ??
 //
 //    //Refresh control
 //    let commissionRefreshControl = UIRefreshControl()
@@ -34,30 +34,64 @@
 //        //Add keyboard dismiss?
 //    }
 //
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//
+//        //From parse documentation
+//        let query = PFQuery(className: "Posts")
+//        //Change order that posts will be in
+//        query.order(byDescending: "CreatedAt")
+//
+//        query.includeKeys(["author", "comments", "comments.author"])
+//        query.limit = 20
+//
+//        query.findObjectsInBackground{(posts, error) in
+//            if posts != nil {
+//                self.commissionPrompts = posts!
+//                self.feedTableView.reloadData() //Fix tableview
+//            }
+//        }
+//    }
+//
 //    //Refresh function
 //    @objc func refreshComissionFeed(){
 //        //Repopulate list of tweets
-//        self.tableView.reloadData()
+//        self.tableView.reloadData() //Fix tableview
 //
 //        //End the refresh
 //        self.theRefreshControl.endRefreshing()
 //    }
 //
 //    //Add hidden keyboard func?
-//    //Add message input bar?
+//    //Add buttons, people can accept the request
 //
-//    //Get commission prompts
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) ->
-//        Int {
-//            let commissionPrompts = prompts[section]
-//
-//            //todo optional comments? likes/favorites?
-////            //If statement is nil handles
-////            let comments = (post["comments"] as? [PFObject]) ?? []
-////
-////            //Comment and add comment cell
-////            return comments.count + 2
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return commissionPrompts.count
 //    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "ArtworkPostCell") as! ArtworkPostCell //Fix tableview
+//
+//        let commissionPrompt = commissionPrompts[indexPath.row]
+//
+//        let user = commissionPrompt["author"] as! PFUser
+//
+//        cell.usernameLabel.text = user.username
+//
+//        //Get commission string and display it
+////        let imageFile = artworkPost["image"] as! PFFileObject
+////        let urlString = imageFile.url!
+////        let url = URL(string: urlString)!
+////
+////        cell.artworkImgView.af_setImage(withURL: url)
+//
+////        cell.commissionStringLabel.text = ...get from Parse!
+//
+//        return cell
+//
+//    }
+//
+//    //Add logout button??
 //
 //
 //
