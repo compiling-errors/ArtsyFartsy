@@ -2,7 +2,7 @@
 //  LoginPageViewController.swift
 //  ArtsyFartsy
 //
-//  Created by Tiny on 4/9/19.
+//  Created by REBEKKA GEEB on 4/9/19.
 //  Copyright © 2019 MICHAEL BENTON. All rights reserved.
 //
 
