@@ -2,7 +2,7 @@
 //  ArtworkFeedViewController.swift
 //  ArtsyFartsy
 //
-//  Created by Tiny on 4/10/19.
+//  Created by REBEKKA GEEB on 4/10/19.
 //  Copyright © 2019 MICHAEL BENTON. All rights reserved.
 //
 
@@ -12,15 +12,23 @@ import AlamofireImage
 
 class ArtworkFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     var artworkPosts = [PFObject]()
     
-    @IBOutlet weak var feedTableView: UITableView!
+    let theRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        feedTableView.delegate = self
-        feedTableView.dataSource = self
+        //Refresh feed
+        refreshArtworkFeed()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        theRefreshControl.addTarget(self, action: #selector(refreshArtworkFeed), for: .valueChanged)
+        self.tableView.refreshControl = theRefreshControl
         
     }
     
@@ -28,19 +36,21 @@ class ArtworkFeedViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidAppear(animated)
         
         //From parse documentation
-        let query = PFQuery(className: "Posts")
-        //Change order that posts will be in
-        query.order(byDescending: "CreatedAt")
+        let query = PFQuery(className: "ArtworkPosts")
         
-        query.includeKeys(["author", "comments", "comments.author"])
+        //Change order that posts will be in
+        query.order(byDescending: "createdAt")
+        
+        query.includeKey("author")
         query.limit = 20
         
-        query.findObjectsInBackground{(posts, error) in
+        query.findObjectsInBackground{ (posts, error) in
             if posts != nil {
                 self.artworkPosts = posts!
-                self.feedTableView.reloadData()
+                self.tableView.reloadData()
             }
         }
+        
     }
     
     
@@ -57,11 +67,11 @@ class ArtworkFeedViewController: UIViewController, UITableViewDelegate, UITableV
         
         cell.usernameLabel.text = user.username
         
-        //Get image and display it 
+        //Get image and display it
         let imageFile = artworkPost["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
-        
+
         cell.artworkImgView.af_setImage(withURL: url)
         
         return cell
@@ -80,6 +90,13 @@ class ArtworkFeedViewController: UIViewController, UITableViewDelegate, UITableV
         delegate.window?.rootViewController = loginPageViewController
     }
     
+    @objc func refreshArtworkFeed(){
+        //Repopulate list of tweets
+        self.tableView.reloadData()
+        
+        //End the refresh
+        self.theRefreshControl.endRefreshing()
+    }
     
    
 
