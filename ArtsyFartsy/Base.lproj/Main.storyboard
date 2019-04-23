@@ -196,19 +196,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtworkPostCell" rowHeight="180" id="JZJ-QF-i8q" customClass="ArtworkPostCell" customModule="ArtsyFartsy" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtworkPostCell" rowHeight="180" id="JZJ-QF-i8q" customClass="ArtworkPostCell" customModule="ArtsyFartsy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JZJ-QF-i8q" id="WcM-Vx-8Tz">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JZJ-QF-i8q" id="WcM-Vx-8Tz">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e6I-CM-lm2">
                                                     <rect key="frame" x="135" y="0.0" width="240" height="175"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="240" id="AdE-Fm-sUK"/>
                                                         <constraint firstAttribute="height" constant="175" id="f6O-Fe-o4n"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="asp-5o-R3O" appends="YES" id="kG8-xc-khE"/>
+                                                    </connections>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rib-WJ-Jul">
                                                     <rect key="frame" x="34.5" y="125" width="78.5" height="21"/>
@@ -231,6 +235,7 @@
                                         <connections>
                                             <outlet property="artworkImgView" destination="e6I-CM-lm2" id="JMO-1w-GaB"/>
                                             <outlet property="usernameLabel" destination="Rib-WJ-Jul" id="9QX-nx-ZX4"/>
+                                            <segue destination="Jp8-Lo-h2n" kind="show" id="QB4-Uz-FED"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -251,8 +256,80 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIn-5q-y8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="asp-5o-R3O"/>
             </objects>
             <point key="canvasLocation" x="-1549.5999999999999" y="1510.7946026986508"/>
+        </scene>
+        <!--Open Artwork View Controller-->
+        <scene sceneID="q69-Ci-MlO">
+            <objects>
+                <viewController id="Jp8-Lo-h2n" customClass="OpenArtworkViewController" customModule="ArtsyFartsy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V74-d6-yC6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VDh-aC-CH8">
+                                <rect key="frame" x="31" y="103" width="312" height="384"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfi-G6-OL5">
+                                <rect key="frame" x="246" y="590" width="102" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Follow Temp"/>
+                                <connections>
+                                    <action selector="followButton:" destination="Jp8-Lo-h2n" eventType="touchUpInside" id="OU7-ib-HUD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X9i-O1-07s">
+                                <rect key="frame" x="27" y="571" width="72" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9T-Y2-OHw">
+                                <rect key="frame" x="31" y="64" width="226" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More info..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhv-tR-Ifz">
+                                <rect key="frame" x="31" y="488" width="312" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P63-0b-HrC">
+                                <rect key="frame" x="117" y="591" width="99" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDB-Sf-YUh">
+                                <rect key="frame" x="265" y="61" width="83" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Like Temp"/>
+                                <connections>
+                                    <action selector="likeButton:" destination="Jp8-Lo-h2n" eventType="touchUpInside" id="azT-VJ-RKS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yMs-Pa-Lt5"/>
+                    </view>
+                    <connections>
+                        <outlet property="artworkImgView" destination="VDh-aC-CH8" id="Ud6-wg-mqd"/>
+                        <outlet property="moreinfoLabel" destination="qhv-tR-Ifz" id="TRH-AH-cyb"/>
+                        <outlet property="nameLabel" destination="R9T-Y2-OHw" id="Qhh-di-o7R"/>
+                        <outlet property="profileImgView" destination="X9i-O1-07s" id="zwy-mU-6xP"/>
+                        <outlet property="usernameLabel" destination="P63-0b-HrC" id="2p8-BE-Rox"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8aa-iU-b0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1551.2" y="2313.1934032983509"/>
         </scene>
         <!--Drawing Prompt Page-->
         <scene sceneID="A6A-8N-DTi">
@@ -285,7 +362,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVl-R2-qgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2641" y="621"/>
+            <point key="canvasLocation" x="-2642" y="620"/>
         </scene>
         <!--Item-->
         <scene sceneID="Nuv-q5-YOJ">
@@ -387,7 +464,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEv-93-4Jn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3710" y="621"/>
+            <point key="canvasLocation" x="-3711" y="620"/>
         </scene>
     </scenes>
     <resources>
