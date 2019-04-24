@@ -37,6 +37,7 @@ class UploadArtworkViewController: UIViewController, UIImagePickerControllerDele
             artworkPost["name"] = self.artworkName.text!
             artworkPost["moreinfo"] = self.artworkMoreInfo.text!
             artworkPost["author"] = PFUser.current()!
+            artworkPost["likeCount"] = 0
             
             //Saved in a separate table for my photos
             let imageData = self.artworkImgView.image!.pngData()
@@ -72,6 +73,7 @@ class UploadArtworkViewController: UIViewController, UIImagePickerControllerDele
                     alertView.show()
                 }
             }
+            
         }
     //If user clicks cancel button
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
