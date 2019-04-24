@@ -315,12 +315,20 @@
                                     <action selector="likeButton:" destination="Jp8-Lo-h2n" eventType="touchUpInside" id="azT-VJ-RKS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynf-bd-IBi">
+                                <rect key="frame" x="229" y="68" width="13" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yMs-Pa-Lt5"/>
                     </view>
                     <connections>
                         <outlet property="artworkImgView" destination="VDh-aC-CH8" id="Ud6-wg-mqd"/>
+                        <outlet property="likesLabel" destination="Ynf-bd-IBi" id="Fc2-CW-khi"/>
                         <outlet property="moreinfoLabel" destination="qhv-tR-Ifz" id="TRH-AH-cyb"/>
                         <outlet property="nameLabel" destination="R9T-Y2-OHw" id="Qhh-di-o7R"/>
                         <outlet property="profileImgView" destination="X9i-O1-07s" id="zwy-mU-6xP"/>
