@@ -56,6 +56,7 @@ This app gives a daily drawing prompt, and allows user artwork to be uploaded, s
 - [x] Login for account access
 * Daily art prompt
 - [x] Artwork can be uploaded to the general feed
+- [x] User account page (user artwork displayed on page)
 - [x] Likes can be left on artwork
 * Customizable app settings
 
