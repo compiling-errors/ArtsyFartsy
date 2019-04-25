@@ -60,6 +60,8 @@ class UploadArtworkViewController: UIViewController, UIImagePickerControllerDele
                     )
                     alertView.show()
                     
+                    //Automatically take user to the artwork feed
+                    
                 } else {
                     print("Error! Unable to save artwork post.")
                     

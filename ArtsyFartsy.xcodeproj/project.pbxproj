@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		05F439B62C89D1472BBA561F /* Pods_ArtsyFartsyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D39CA6056AD1DBAE54F84D /* Pods_ArtsyFartsyUITests.framework */; };
-		080F9D6522602C65007E99C0 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080F9D6422602C65007E99C0 /* AccountViewController.swift */; };
 		080F9D672260301A007E99C0 /* UploadProfilePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080F9D662260301A007E99C0 /* UploadProfilePhotoViewController.swift */; };
 		080F9D69226035ED007E99C0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080F9D68226035ED007E99C0 /* SignUpViewController.swift */; };
 		080F9D6B22603705007E99C0 /* ComissionPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080F9D6A22603705007E99C0 /* ComissionPostCell.swift */; };
 		088685702256F4C200C1292B /* ArtworkPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0886856F2256F4C200C1292B /* ArtworkPostCell.swift */; };
 		088685742256FAD600C1292B /* ComissionPromptFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088685732256FAD600C1292B /* ComissionPromptFeedViewController.swift */; };
 		088685762256FED100C1292B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088685752256FED100C1292B /* SettingsViewController.swift */; };
+		2A17B68E22718CAF0093DDE5 /* AccountFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A17B68D22718CAE0093DDE5 /* AccountFeedViewController.swift */; };
+		2A17B6902271902F0093DDE5 /* AccountArtworkPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A17B68F2271902F0093DDE5 /* AccountArtworkPostCell.swift */; };
 		2A1EAA5C225F04970075BF12 /* UploadArtworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1EAA5B225F04970075BF12 /* UploadArtworkViewController.swift */; };
 		2A511334225DD69900D106E9 /* ArtworkFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A511333225DD69900D106E9 /* ArtworkFeedViewController.swift */; };
 		2AC08BBA226EBDF400DE04C1 /* OpenArtworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC08BB9226EBDF400DE04C1 /* OpenArtworkViewController.swift */; };
@@ -46,7 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		080F9D6422602C65007E99C0 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		080F9D662260301A007E99C0 /* UploadProfilePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProfilePhotoViewController.swift; sourceTree = "<group>"; };
 		080F9D68226035ED007E99C0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		080F9D6A22603705007E99C0 /* ComissionPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComissionPostCell.swift; sourceTree = "<group>"; };
@@ -56,6 +56,8 @@
 		0E22128FD7245A308403CB0B /* Pods-ArtsyFartsyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtsyFartsyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtsyFartsyTests/Pods-ArtsyFartsyTests.release.xcconfig"; sourceTree = "<group>"; };
 		1FCB180D9234872CA0D91033 /* Pods-ArtsyFartsyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtsyFartsyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtsyFartsyUITests/Pods-ArtsyFartsyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		22D39CA6056AD1DBAE54F84D /* Pods_ArtsyFartsyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtsyFartsyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A17B68D22718CAE0093DDE5 /* AccountFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFeedViewController.swift; sourceTree = "<group>"; };
+		2A17B68F2271902F0093DDE5 /* AccountArtworkPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountArtworkPostCell.swift; sourceTree = "<group>"; };
 		2A1EAA5B225F04970075BF12 /* UploadArtworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadArtworkViewController.swift; sourceTree = "<group>"; };
 		2A511333225DD69900D106E9 /* ArtworkFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkFeedViewController.swift; sourceTree = "<group>"; };
 		2AC08BB9226EBDF400DE04C1 /* OpenArtworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenArtworkViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +153,8 @@
 				088685732256FAD600C1292B /* ComissionPromptFeedViewController.swift */,
 				0886856F2256F4C200C1292B /* ArtworkPostCell.swift */,
 				2A511333225DD69900D106E9 /* ArtworkFeedViewController.swift */,
-				080F9D6422602C65007E99C0 /* AccountViewController.swift */,
+				2A17B68F2271902F0093DDE5 /* AccountArtworkPostCell.swift */,
+				2A17B68D22718CAE0093DDE5 /* AccountFeedViewController.swift */,
 				080F9D6A22603705007E99C0 /* ComissionPostCell.swift */,
 				2AFEA386225CAB94000D1E31 /* LoginPageViewController.swift */,
 				AC0095F922445B0800D20705 /* Main.storyboard */,
@@ -425,13 +428,14 @@
 			files = (
 				088685702256F4C200C1292B /* ArtworkPostCell.swift in Sources */,
 				2AC08BBA226EBDF400DE04C1 /* OpenArtworkViewController.swift in Sources */,
+				2A17B68E22718CAF0093DDE5 /* AccountFeedViewController.swift in Sources */,
 				2AFEA387225CAB94000D1E31 /* LoginPageViewController.swift in Sources */,
-				080F9D6522602C65007E99C0 /* AccountViewController.swift in Sources */,
 				088685762256FED100C1292B /* SettingsViewController.swift in Sources */,
 				080F9D69226035ED007E99C0 /* SignUpViewController.swift in Sources */,
 				AC0095F622445B0800D20705 /* AppDelegate.swift in Sources */,
 				088685742256FAD600C1292B /* ComissionPromptFeedViewController.swift in Sources */,
 				2A1EAA5C225F04970075BF12 /* UploadArtworkViewController.swift in Sources */,
+				2A17B6902271902F0093DDE5 /* AccountArtworkPostCell.swift in Sources */,
 				080F9D672260301A007E99C0 /* UploadProfilePhotoViewController.swift in Sources */,
 				2A511334225DD69900D106E9 /* ArtworkFeedViewController.swift in Sources */,
 				080F9D6B22603705007E99C0 /* ComissionPostCell.swift in Sources */,

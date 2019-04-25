@@ -62,20 +62,11 @@ class OpenArtworkViewController: UIViewController {
             } else {
                 //The object has been retrieved
                 let stringstuff = tempCount!.object(forKey: "name")
-//                self.likesLabel.text = stringstuff as! String
-                
                 
                 let x : Int = tempCount!.object(forKey: "likeCount") as! Int
                 let xNSNumber = x as NSNumber
                 let xString : String = xNSNumber.stringValue
                 self.likesLabel.text = xString
-                
-                //                let newLikeCount = self.artworkPost["likeCount"]
-//                let theCount = (newLikeCount as AnyObject).stringValue
-//
-//                self.likesLabel.text = theCount
-                
-                
             }
         }
 }
