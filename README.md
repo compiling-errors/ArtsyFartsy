@@ -58,7 +58,7 @@ This app gives a daily drawing prompt, and allows user artwork to be uploaded, s
 - [x] Artwork can be uploaded to the general feed
 - [x] User account page (user artwork displayed on page)
 - [x] Likes can be left on artwork
-* Customizable app settings
+
 
 **Optional Nice-to-have Stories**
 
@@ -69,6 +69,7 @@ This app gives a daily drawing prompt, and allows user artwork to be uploaded, s
 * Favorite artwork to find it quickly
 * Featured artwork page
 * Monetization
+* Customizable app settings
 
 ### 2. Screen Archetypes
 
