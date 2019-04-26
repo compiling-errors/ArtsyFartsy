@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="bAe-FP-A39">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="ArtsyFartsyTitlte" translatesAutoresizingMaskIntoConstraints="NO" id="bAe-FP-A39">
                                 <rect key="frame" x="0.0" y="219" width="414" height="414"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -37,7 +37,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ArtsyFartsyTitlte" width="341" height="341"/>
         <image name="Background" width="1242" height="2688"/>
-        <image name="LaunchImage" width="1024" height="1024"/>
     </resources>
 </document>
