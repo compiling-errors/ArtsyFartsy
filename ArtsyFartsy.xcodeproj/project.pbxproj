@@ -27,6 +27,7 @@
 		AC00960022445B0800D20705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0095FE22445B0800D20705 /* LaunchScreen.storyboard */; };
 		AC00960B22445B0900D20705 /* ArtsyFartsyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00960A22445B0900D20705 /* ArtsyFartsyTests.swift */; };
 		AC00961622445B0900D20705 /* ArtsyFartsyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00961522445B0900D20705 /* ArtsyFartsyUITests.swift */; };
+		ACA14CF72260160900AF943A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA14CF62260160800AF943A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		AC00961122445B0900D20705 /* ArtsyFartsyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtsyFartsyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC00961522445B0900D20705 /* ArtsyFartsyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtsyFartsyUITests.swift; sourceTree = "<group>"; };
 		AC00961722445B0900D20705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACA14CF62260160800AF943A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6A62B201392471CA178FCC4 /* Pods_ArtsyFartsyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtsyFartsyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B2152CCF2397006E220B86 /* Pods-ArtsyFartsyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtsyFartsyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtsyFartsyTests/Pods-ArtsyFartsyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +146,7 @@
 		AC0095F422445B0800D20705 /* ArtsyFartsy */ = {
 			isa = PBXGroup;
 			children = (
+				ACA14CF62260160800AF943A /* Assets.xcassets */,
 				AC0095F522445B0800D20705 /* AppDelegate.swift */,
 				2A1EAA5B225F04970075BF12 /* UploadArtworkViewController.swift */,
 				2AC08BB9226EBDF400DE04C1 /* OpenArtworkViewController.swift */,
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC00960022445B0800D20705 /* LaunchScreen.storyboard in Resources */,
+				ACA14CF72260160900AF943A /* Assets.xcassets in Resources */,
 				AC0095FB22445B0800D20705 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
