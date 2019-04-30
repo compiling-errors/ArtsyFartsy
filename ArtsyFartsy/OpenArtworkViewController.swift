@@ -24,11 +24,12 @@ class OpenArtworkViewController: UIViewController {
     @IBOutlet weak var moreinfoLabel: UILabel!
     @IBOutlet weak var likesLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Declare user of current displayed artwork
         let user = artwork?["author"] as! PFUser
+        
 
         // Do any additional setup after loading the view.
         print(artwork?["name"])
@@ -123,42 +124,60 @@ class OpenArtworkViewController: UIViewController {
             
         }
         
-//        let query = PFQuery(className:"ArtworkPosts")
-//        let theUser = query.whereKey("usersClickedLike", equalTo: currentUser!)
-//
-//        if false == false  {
-//
-//               //do nothing
-//        } else {
-//            let query = PFQuery(className:"ArtworkPosts")
-//            query.getObjectInBackground(withId: imageId) { (userClickedLike: PFObject?, error: Error?) in
-//                if let error = error {
-//                    print("Error, objectId could not be found. Like was not saved.", error.localizedDescription)
-//                } else if let userClickedLike = userClickedLike {
-//                    userClickedLike.addUniqueObjects(from: [PFUser.current()?.username], forKey:"usersClickedLike")
-//                    userClickedLike.saveInBackground()
-//
-//                    print("Like saved.")
-//
-//                    //Calculate and display likes on open artwork screen
-//                }
-//            }
-//        }
         
     }
-        
-        
-        //Display count for likes
-        
-        //Get current like count, using saved usernames for selected artwork
-        
-        //likesLabel.Text = query.countObjects
     
+    
+  
     
     @IBAction func followButton(_ sender: Any) {
-    }
-    
-    
+        print("Follow button clicked.")
+        
+        //Declare user of current displayed artwork, for use in follow button
+        let usertest = artwork?["author"] as! PFUser
+        let authorUsername1 = usertest.username!
+        print(authorUsername1)
+
+
+//        artwork?.object(forKey: "author") as? String
+        let currentUser = PFUser.current()
+        //Add username into ArtworkPosts table, to "add a like"
+        //Check if user has already clicked like
+        print("user id:", currentUser?.objectId)
+        
+//        query user table author = artworkauthor
+        let objectId1 = usertest.objectId!
+        print(objectId1)
+        // suppose we have a user we want to follow
+        
+            /////////////////////////////////////////////////////////
+        let query = PFQuery(className:"Follow")
+        query.whereKey("userBeingFollowed", equalTo:authorUsername1)
+        query.whereKey("userFollowing", equalTo: PFUser.current()!.username!)
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if error != nil {
+                // Log details of the failure
+                
+            } else if let objects = objects{
+                print("test if empty" ,objects.isEmpty)
+                if objects.isEmpty{
+                    // create an entry in the Follow table
+                    let follow = PFObject(className: "Follow")
+                    follow.setObject(PFUser.current()!.username!, forKey: "userFollowing")
+                    follow.setObject(authorUsername1, forKey: "userBeingFollowed")
+                    follow.saveInBackground()
+                }
+                // The find succeeded.
+                print("User already following")
+                // Do something with the found objects
+            }
+        }
+        // suppose we have a user we want to follow
+
+        
+}
+
+
 
     /*
     // MARK: - Navigation
@@ -169,5 +188,6 @@ class OpenArtworkViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }
