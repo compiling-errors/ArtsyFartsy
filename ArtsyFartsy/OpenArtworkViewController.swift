@@ -2,7 +2,7 @@
 //  OpenArtworkViewController.swift
 //  ArtsyFartsy
 //
-//  Created by Tiny on 4/22/19.
+//  Created by REBEKKA GEEB on 4/22/19.
 //  Copyright © 2019 MICHAEL BENTON. All rights reserved.
 //
 
@@ -148,15 +148,16 @@ class OpenArtworkViewController: UIViewController {
 //        query user table author = artworkauthor
         let objectId1 = usertest.objectId!
         print(objectId1)
-        // suppose we have a user we want to follow
         
-            /////////////////////////////////////////////////////////
+        // Follow user
         let query = PFQuery(className:"Follow")
         query.whereKey("userBeingFollowed", equalTo:authorUsername1)
         query.whereKey("userFollowing", equalTo: PFUser.current()!.username!)
         query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
             if error != nil {
                 // Log details of the failure
+                print("Error:", error!.localizedDescription)
+                
                 
             } else if let objects = objects{
                 print("test if empty" ,objects.isEmpty)
@@ -166,13 +167,31 @@ class OpenArtworkViewController: UIViewController {
                     follow.setObject(PFUser.current()!.username!, forKey: "userFollowing")
                     follow.setObject(authorUsername1, forKey: "userBeingFollowed")
                     follow.saveInBackground()
+                    
+                    //Show a success message to user
+                    let alertView = UIAlertView(
+                        title: "Followed",
+                        message: "Success! User has been followed.",
+                        delegate: nil,
+                        cancelButtonTitle: "OK"
+                    )
+                    alertView.show()
+                    
+                } else {
+                    print("User already following this person")
+                    
+                    //Show a failure message to user
+                    let alertView = UIAlertView(
+                        title: "Unable to Follow",
+                        message: "User has already been followed. See following page.",
+                        delegate: nil,
+                        cancelButtonTitle: "OK"
+                    )
+                    alertView.show()
                 }
-                // The find succeeded.
-                print("User already following")
-                // Do something with the found objects
+               
             }
         }
-        // suppose we have a user we want to follow
 
         
 }

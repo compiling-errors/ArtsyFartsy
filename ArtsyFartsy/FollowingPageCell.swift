@@ -1,18 +1,19 @@
 //
-//  AccountArtworkPostCell.swift
+//  FollowingPageCell.swift
 //  ArtsyFartsy
 //
-//  Created by REBEKKA GEEB on 4/24/19.
+//  Created by REBEKKA GEEB on 4/30/19.
 //  Copyright © 2019 MICHAEL BENTON. All rights reserved.
 //
 
 import UIKit
 
-class AccountArtworkPostCell: UITableViewCell {
+class FollowingPageCell: UITableViewCell {
     
-    @IBOutlet weak var accountArtworkImgView: UIImageView!
     
-    @IBOutlet weak var postDateLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var followedArtworkImgView: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

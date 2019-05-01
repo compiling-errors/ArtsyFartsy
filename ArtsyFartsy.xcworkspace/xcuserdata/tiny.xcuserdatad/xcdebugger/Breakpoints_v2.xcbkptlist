@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ArtsyFartsy/OpenArtworkViewController.swift"
-            timestampString = "578310555.873508"
+            timestampString = "578364103.397548"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "followButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
