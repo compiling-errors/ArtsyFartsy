@@ -334,6 +334,21 @@
             </objects>
             <point key="canvasLocation" x="-1551.2" y="2313.1934032983509"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="1By-Ef-U0g">
+            <objects>
+                <viewController id="zAD-SM-EOP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e1E-YZ-tKr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dxc-YA-MrN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9fA-FV-I9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-520" y="2313"/>
+        </scene>
         <!--Drawing Prompt of the Day-->
         <scene sceneID="A6A-8N-DTi">
             <objects>
@@ -455,6 +470,7 @@
                                         <connections>
                                             <outlet property="followedArtworkImgView" destination="dny-xO-ISH" id="d33-NL-OZ5"/>
                                             <outlet property="usernameLabel" destination="D9d-c3-e06" id="yuC-4w-EwZ"/>
+                                            <segue destination="zAD-SM-EOP" kind="show" id="s0A-w4-n01"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

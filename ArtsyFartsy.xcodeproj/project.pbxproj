@@ -15,6 +15,7 @@
 		2A17B68E22718CAF0093DDE5 /* AccountFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A17B68D22718CAE0093DDE5 /* AccountFeedViewController.swift */; };
 		2A17B6902271902F0093DDE5 /* AccountArtworkPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A17B68F2271902F0093DDE5 /* AccountArtworkPostCell.swift */; };
 		2A1EAA5C225F04970075BF12 /* UploadArtworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1EAA5B225F04970075BF12 /* UploadArtworkViewController.swift */; };
+		2A2093DE2279A7540094F0A7 /* OpenFollowedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2093DD2279A7540094F0A7 /* OpenFollowedViewController.swift */; };
 		2A511334225DD69900D106E9 /* ArtworkFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A511333225DD69900D106E9 /* ArtworkFeedViewController.swift */; };
 		2AAA8A252279169100355DD0 /* FollowingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA8A242279169100355DD0 /* FollowingPageViewController.swift */; };
 		2AAA8A272279182600355DD0 /* FollowingPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA8A262279182600355DD0 /* FollowingPageCell.swift */; };
@@ -58,6 +59,7 @@
 		2A17B68D22718CAE0093DDE5 /* AccountFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFeedViewController.swift; sourceTree = "<group>"; };
 		2A17B68F2271902F0093DDE5 /* AccountArtworkPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountArtworkPostCell.swift; sourceTree = "<group>"; };
 		2A1EAA5B225F04970075BF12 /* UploadArtworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadArtworkViewController.swift; sourceTree = "<group>"; };
+		2A2093DD2279A7540094F0A7 /* OpenFollowedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFollowedViewController.swift; sourceTree = "<group>"; };
 		2A511333225DD69900D106E9 /* ArtworkFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkFeedViewController.swift; sourceTree = "<group>"; };
 		2AAA8A242279169100355DD0 /* FollowingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingPageViewController.swift; sourceTree = "<group>"; };
 		2AAA8A262279182600355DD0 /* FollowingPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingPageCell.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				088685752256FED100C1292B /* SettingsViewController.swift */,
 				080F9D68226035ED007E99C0 /* SignUpViewController.swift */,
 				0886856F2256F4C200C1292B /* ArtworkPostCell.swift */,
+				2A2093DD2279A7540094F0A7 /* OpenFollowedViewController.swift */,
 				2AAA8A262279182600355DD0 /* FollowingPageCell.swift */,
 				2A17B68F2271902F0093DDE5 /* AccountArtworkPostCell.swift */,
 				2A17B68D22718CAE0093DDE5 /* AccountFeedViewController.swift */,
@@ -442,6 +445,7 @@
 				2A17B6902271902F0093DDE5 /* AccountArtworkPostCell.swift in Sources */,
 				080F9D672260301A007E99C0 /* UploadProfilePhotoViewController.swift in Sources */,
 				2AAA8A272279182600355DD0 /* FollowingPageCell.swift in Sources */,
+				2A2093DE2279A7540094F0A7 /* OpenFollowedViewController.swift in Sources */,
 				2A511334225DD69900D106E9 /* ArtworkFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
