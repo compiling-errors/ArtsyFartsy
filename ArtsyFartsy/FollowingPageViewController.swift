@@ -14,7 +14,8 @@ class FollowingPageViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var tableView: UITableView!
     
-    var following = [PFObject]()
+    var usersFollowedPFObject = [PFObject]()
+    var followingFeedPFObjectToBeDisplayed = [PFObject]()
     
     let theRefreshControl = UIRefreshControl()
 
@@ -35,46 +36,75 @@ class FollowingPageViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        self.usersFollowedPFObject = [PFObject]()
+        self.followingFeedPFObjectToBeDisplayed = [PFObject]()
+        
+        //Query for getting usernames of users being followed
         let query = PFQuery(className: "Follow")
-        query.whereKey("userFollowing", contains: PFUser.current()?.username)
+        //origonal before testing
+//        query.whereKey("userFollowing", contains: PFUser.current()?.username)
+        query.whereKey("userFollowing", contains: PFUser.current()?.objectId)
         
         //Change order that posts will be in
         query.order(byDescending: "createdAt")
         
-        query.includeKey("userBeingFollowed")
+        query.includeKey("userBeingFollowedUsername")
         query.limit = 20
         
         query.findObjectsInBackground{ (followed, error) in
             if followed != nil {
-                self.following = followed!
-                self.tableView.reloadData()
+                self.usersFollowedPFObject = followed!
+                
+                for individualUser in followed! {
+                    
+                    let usertest = individualUser["userBeingFollowedObjectId"]
+                    //Username is the username string retrieved from individualUser
+                    let userObjectId = usertest! as! String
+                    
+                    //From parse documentation
+                    let query = PFQuery(className: "ArtworkPosts")
+                    //Change order that posts will be in
+                    query.order(byDescending: "createdAt")
+                    //                query.includeKey("author")
+                    //                query.limit = 20
+                    query.whereKey("authorId", equalTo: userObjectId)
+                    query.getFirstObjectInBackground{ (object, error) in
+                        if object != nil {
+                            self.followingFeedPFObjectToBeDisplayed.append(object!)
+                            self.tableView.reloadData()
+                        }
+                    }
+                }
             }
         }
-        
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return following.count
+        return followingFeedPFObjectToBeDisplayed.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FollowingPageCell") as! FollowingPageCell
-        
-        let followed = following[indexPath.row]
-        
+
+//        let followed = usersFollowedPFObject[indexPath.row]
+
+        let followed2 = followingFeedPFObjectToBeDisplayed[indexPath.row]
         //Get and display followed user's username
-        let usertest = followed["userBeingFollowed"] as! String
+        let usertest = followed2["authorUsername"] as! String
         
         cell.usernameLabel.text = usertest
         
-//        //Get image and display it
-//        let imageFile = followed["image"] as! PFFileObject
-//        let urlString = imageFile.url!
-//        let url = URL(string: urlString)!
-//
-//        cell.followedArtworkImgView.af_setImage(withURL: url)
+        //        individualUser is pfobject, takes each individual pfobject inside followed
         
+        
+//        Get image and display it
+        let imageFile = followed2["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+
+        cell.followedArtworkImgView.af_setImage(withURL: url)
+
         return cell
         
     }
@@ -88,28 +118,29 @@ class FollowingPageViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
 
-    //Send data to OpenArtworkViewController to view larger version of user artwork
-    
-    // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        
-        print("Opening user individual artwork screen.")
-        
-        //Get selected user individual artwork
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        let artwork = following[indexPath.row]
-        
-        //Pass information to OpenArtworkViewController
-        let individualArtworkViewController = segue.destination as! OpenArtworkViewController
-        
-        individualArtworkViewController.artwork = artwork
-        
-        //Deselect cell manually
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-
+//    //Send data to OpenArtworkViewController to view larger version of user artwork
+//
+//    // MARK: - Navigation
+//    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destination.
+//        // Pass the selected object to the new view controller.
+//
+//        print("Opening user individual artwork screen.")
+//
+//        //Get selected user individual artwork
+//        let cell = sender as! UITableViewCell
+//        let indexPath = tableView.indexPath(for: cell)!
+//        let artwork = following[indexPath.row]
+//
+//        //Pass information to OpenArtworkViewController
+//        let individualArtworkViewController = segue.destination as! OpenArtworkViewController
+//
+//        individualArtworkViewController.artwork = artwork
+//
+//        //Deselect cell manually
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
+//
 }
+

@@ -135,7 +135,10 @@ class OpenArtworkViewController: UIViewController {
         
         //Declare user of current displayed artwork, for use in follow button
         let usertest = artwork?["author"] as! PFUser
-        let authorUsername1 = usertest.username!
+        let authorUsername1 = usertest.objectId!
+        let authorUsername2 = usertest.username!
+        //origonal for testing
+//        let authorUsername1 = usertest.username!
         print(authorUsername1)
 
 
@@ -151,8 +154,10 @@ class OpenArtworkViewController: UIViewController {
         
         // Follow user
         let query = PFQuery(className:"Follow")
-        query.whereKey("userBeingFollowed", equalTo:authorUsername1)
-        query.whereKey("userFollowing", equalTo: PFUser.current()!.username!)
+        query.whereKey("userBeingFollowedObjectId", equalTo:authorUsername1)
+        //origonal before testing
+//        query.whereKey("userFollowing", equalTo: PFUser.current()!.username!)
+        query.whereKey("userFollowing", equalTo: PFUser.current()!)
         query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
             if error != nil {
                 // Log details of the failure
@@ -164,8 +169,11 @@ class OpenArtworkViewController: UIViewController {
                 if objects.isEmpty{
                     // create an entry in the Follow table
                     let follow = PFObject(className: "Follow")
-                    follow.setObject(PFUser.current()!.username!, forKey: "userFollowing")
-                    follow.setObject(authorUsername1, forKey: "userBeingFollowed")
+                    //before testing
+//                    follow.setObject(PFUser.current()!.username!, forKey: "userFollowing")
+                    follow.setObject(PFUser.current()!, forKey: "userFollowing")
+                    follow.setObject(authorUsername1, forKey: "userBeingFollowedObjectId")
+                    follow.setObject(authorUsername2, forKey: "userBeingFollowedUsername")
                     follow.saveInBackground()
                     
                     //Show a success message to user

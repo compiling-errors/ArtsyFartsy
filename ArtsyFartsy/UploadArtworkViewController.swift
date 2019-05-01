@@ -37,6 +37,8 @@ class UploadArtworkViewController: UIViewController, UIImagePickerControllerDele
             artworkPost["name"] = self.artworkName.text!
             artworkPost["moreinfo"] = self.artworkMoreInfo.text!
             artworkPost["author"] = PFUser.current()!
+            artworkPost["authorUsername"] = PFUser.current()!.username!
+            artworkPost["authorId"] = PFUser.current()!.objectId!
             artworkPost["likeCount"] = 0
             
             //Saved in a separate table for my photos
