@@ -4,7 +4,7 @@ Group Project - Compiling Errors
 ===
 Sprint 3 Build Progress Gifs:
 
-<img src='' />
+<img src='http://g.recordit.co/qjhzOkbN6M.gif' />
 
 Created with: recordit.co
 
