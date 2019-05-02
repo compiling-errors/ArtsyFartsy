@@ -8,9 +8,7 @@ Sprint 3 Build Progress Gifs:
 
 Created with: recordit.co
 
-<img src='' />
 
-Created with: recordit.co
 
 
 Sprint 2 Build Progress Gifs:
