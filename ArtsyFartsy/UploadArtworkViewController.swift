@@ -50,7 +50,6 @@ class UploadArtworkViewController: UIViewController, UIImagePickerControllerDele
             
             artworkPost.saveInBackground { (success, error) in
                 if success{
-                    self.dismiss(animated: true, completion: nil)
                     print("Saved artwork post!")
                     
                     //Show a success message to user

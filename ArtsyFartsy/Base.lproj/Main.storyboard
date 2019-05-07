@@ -667,7 +667,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="16o-HB-7oJ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Account" id="dJo-Ki-Nul"/>
+                    <navigationItem key="navigationItem" title="Account" id="dJo-Ki-Nul">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="KAd-lA-BNB">
+                            <connections>
+                                <action selector="logoutButton:" destination="lsw-HS-Sv9" id="Gi6-h9-P1m"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="accountTableView" destination="DgA-H3-sdP" id="pcp-Ku-SA2"/>
                         <outlet property="currentUsernameLabel" destination="46P-BM-Rak" id="RXI-Dd-qNs"/>
