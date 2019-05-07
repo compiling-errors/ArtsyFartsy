@@ -88,6 +88,7 @@ class AccountFeedViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
+    
     @IBAction func logoutButton(_ sender: Any) {
         PFUser.logOut()
         
