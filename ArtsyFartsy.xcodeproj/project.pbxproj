@@ -20,6 +20,7 @@
 		2AAA8A252279169100355DD0 /* FollowingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA8A242279169100355DD0 /* FollowingPageViewController.swift */; };
 		2AAA8A272279182600355DD0 /* FollowingPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAA8A262279182600355DD0 /* FollowingPageCell.swift */; };
 		2AC08BBA226EBDF400DE04C1 /* OpenArtworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC08BB9226EBDF400DE04C1 /* OpenArtworkViewController.swift */; };
+		2AE2EC7C22811D3600FE36F0 /* DrawingPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE2EC7B22811D3600FE36F0 /* DrawingPromptViewController.swift */; };
 		2AFEA387225CAB94000D1E31 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEA386225CAB94000D1E31 /* LoginPageViewController.swift */; };
 		4A28161862E45D011CBAFF56 /* Pods_ArtsyFartsy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F41FFC8302E01E8F31EDDD9 /* Pods_ArtsyFartsy.framework */; };
 		6421080E69BDADDCC92E33AD /* Pods_ArtsyFartsyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A62B201392471CA178FCC4 /* Pods_ArtsyFartsyTests.framework */; };
@@ -64,6 +65,7 @@
 		2AAA8A242279169100355DD0 /* FollowingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingPageViewController.swift; sourceTree = "<group>"; };
 		2AAA8A262279182600355DD0 /* FollowingPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingPageCell.swift; sourceTree = "<group>"; };
 		2AC08BB9226EBDF400DE04C1 /* OpenArtworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenArtworkViewController.swift; sourceTree = "<group>"; };
+		2AE2EC7B22811D3600FE36F0 /* DrawingPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPromptViewController.swift; sourceTree = "<group>"; };
 		2AFEA386225CAB94000D1E31 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		2F7C670512AAE5D20511DE33 /* Pods-ArtsyFartsy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtsyFartsy.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtsyFartsy/Pods-ArtsyFartsy.release.xcconfig"; sourceTree = "<group>"; };
 		5D183A3F3080837C62B4E1CA /* Pods-ArtsyFartsyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtsyFartsyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtsyFartsyUITests/Pods-ArtsyFartsyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				2A1EAA5B225F04970075BF12 /* UploadArtworkViewController.swift */,
 				2AC08BB9226EBDF400DE04C1 /* OpenArtworkViewController.swift */,
 				2AAA8A242279169100355DD0 /* FollowingPageViewController.swift */,
+				2AE2EC7B22811D3600FE36F0 /* DrawingPromptViewController.swift */,
 				2A2093DD2279A7540094F0A7 /* OpenFollowedViewController.swift */,
 				2A511333225DD69900D106E9 /* ArtworkFeedViewController.swift */,
 				080F9D662260301A007E99C0 /* UploadProfilePhotoViewController.swift */,
@@ -436,6 +439,7 @@
 				088685702256F4C200C1292B /* ArtworkPostCell.swift in Sources */,
 				2AC08BBA226EBDF400DE04C1 /* OpenArtworkViewController.swift in Sources */,
 				2A17B68E22718CAF0093DDE5 /* AccountFeedViewController.swift in Sources */,
+				2AE2EC7C22811D3600FE36F0 /* DrawingPromptViewController.swift in Sources */,
 				2AFEA387225CAB94000D1E31 /* LoginPageViewController.swift in Sources */,
 				088685762256FED100C1292B /* SettingsViewController.swift in Sources */,
 				2AAA8A252279169100355DD0 /* FollowingPageViewController.swift in Sources */,
