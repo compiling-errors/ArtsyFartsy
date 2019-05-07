@@ -103,9 +103,66 @@ class OpenFollowedViewController: UIViewController {
         }
     }
     
+    @IBAction func unfollowButton(_ sender: Any) {
+        
+        //Ask user to confirm that they want to delete follow
+        let alertController = UIAlertController(title: "Delete follow?", message: "Are you sure you want to unfollow this user?", preferredStyle: .alert)
+        
+        let deleteAction = UIAlertAction(title: "Delete follow", style: .default) { (action) in
+            
+            let query = PFQuery(className: "Follow")
+            query.whereKey("userBeingFollowedUsername", equalTo: self.individualUser?["authorUsername"] as! String)
+            query.whereKey("userFollowing", equalTo: PFUser.current()!)
+            query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+                if let error = error {
+                    // Log details of the failure
+                    print("Error, unable to unfollow user :" ,error.localizedDescription)
+                    
+                    let alertView = UIAlertView(
+                        title: "Error",
+                        message: "Unable to unfollow user. Please try again.",
+                        delegate: nil,
+                        cancelButtonTitle: "OK"
+                    )
+                    alertView.show()
+                    
+                } else if let objects = objects {
+                    // The find succeeded.
+                    print("Successfully unfollowed user.")
+                    // Do something with the found objects
+                    for object in objects {
+                        object.deleteInBackground()
+                    }
+                    
+                    //Show a success message to user
+                    let alertView = UIAlertView(
+                        title: "Follow Deleted",
+                        message: "Successfully unfollowed user.",
+                        delegate: nil,
+                        cancelButtonTitle: "OK"
+                    )
+                    alertView.show()
+                    
+                    
+                }
+            }
+        }
+        //If user clicks cancel button
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            //do nothing
+        }
+        alertController.addAction(deleteAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true)
+        
+    }
+        
+
 
 //    @IBOutlet var backButton: UIView!
 //    let secondViewController:FollowingPageViewController = SecondViewController()
 //
 //    self.presentViewController(secondViewController, animated: true, completion: nil)
+
 }
