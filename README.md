@@ -73,13 +73,10 @@ This app gives a daily drawing prompt, and allows user artwork to be uploaded, s
 
 - [x] Following page
 * Customizable user profile page
-* Friend list
-* Chat with other users
-* Search for artwork
-* Favorite artwork to find it quickly
+* Friend list / Chat with other users
+* Search for artwork / Favorite artwork to find it quickly
 * Featured artwork page
 * Monetization
-* Customizable app settings
 
 ### 2. Screen Archetypes
 
