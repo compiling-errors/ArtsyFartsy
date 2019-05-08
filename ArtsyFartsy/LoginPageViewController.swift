@@ -3,7 +3,7 @@
 //  ArtsyFartsy
 //
 //  Created by REBEKKA GEEB on 4/9/19.
-//  Copyright © 2019 MICHAEL BENTON. All rights reserved.
+//  Copyright © 2019 MICHAEL BENTON, REBEKKA GEEB. All rights reserved.
 //
 
 import UIKit
@@ -51,6 +51,9 @@ class LoginPageViewController: UIViewController {
         user.username = usernameField.text
         user.password = passwordField.text
         // add email: user.email = emailField.text
+//        let image = UIImage(named: "user.png")
+//
+//        user["profilePic"] = image
         
         user.signUpInBackground { (success, error) in
             if success {

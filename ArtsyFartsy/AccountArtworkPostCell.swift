@@ -3,7 +3,7 @@
 //  ArtsyFartsy
 //
 //  Created by REBEKKA GEEB on 4/24/19.
-//  Copyright © 2019 MICHAEL BENTON. All rights reserved.
+//  Copyright © 2019 MICHAEL BENTON, REBEKKA GEEB. All rights reserved.
 //
 
 import UIKit

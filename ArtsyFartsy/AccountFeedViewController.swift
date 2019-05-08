@@ -3,18 +3,18 @@
 //  ArtsyFartsy
 //
 //  Created by REBEKKA GEEB on 4/24/19.
-//  Copyright © 2019 MICHAEL BENTON. All rights reserved.
+//  Copyright © 2019 MICHAEL BENTON, REBEKKA GEEB. All rights reserved.
 //
 
 import UIKit
 import Parse
 import AlamofireImage
 
-class AccountFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class AccountFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     @IBOutlet weak var currentUsernameLabel: UILabel!
-    
     @IBOutlet weak var accountTableView: UITableView!
+    @IBOutlet weak var profilePicImgView: UIImageView!
     
     var userArtworkPosts = [PFObject]()
     
@@ -47,7 +47,7 @@ class AccountFeedViewController: UIViewController, UITableViewDelegate, UITableV
         query.order(byDescending: "createdAt")
         
         query.includeKey("author")
-        query.limit = 20
+        query.limit = 999
         
         query.findObjectsInBackground{ (posts, error) in
             if posts != nil {
@@ -113,11 +113,120 @@ class AccountFeedViewController: UIViewController, UITableViewDelegate, UITableV
         currentUsernameLabel.text = PFUser.current()?.username
     }
     
+    func showUserProfilePic() {
+        
+    }
     
     //Send data to OpenArtworkViewController to view larger version of user artwork
     
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    @IBAction func tapToChangeProfilePic(_ sender: Any) {
+        let artworkPicker = UIImagePickerController()
+        artworkPicker.delegate = self
+        artworkPicker.allowsEditing = true
+        
+        //Uses camera on regular phone, or photolibrary for simulator, prevent crash
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            artworkPicker.sourceType = .camera
+        } else {
+            artworkPicker.sourceType = .photoLibrary
+        }
+        
+        present(artworkPicker, animated: true, completion: nil)
+    }
+    
+    //Have user be able to pick photo from camera
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let image = info[.editedImage] as! UIImage
+        
+        //Resize photo
+        let size = CGSize(width: 300, height: 300)
+        let scaledImage = image.af_imageAspectScaled(toFill: size)
+        
+        profilePicImgView.image = scaledImage
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func saveButton(_ sender: Any) {
+        if self.profilePicImgView.image == nil {
+            let alertView = UIAlertView(
+                title: "Error!",
+                message: "Error! Must select a picture to save. Please try again.",
+                delegate: nil,
+                cancelButtonTitle: "OK"
+            )
+            alertView.show()
+            
+        } else {
+            //Ask user to confirm that they want to post artwork to public feed
+            let alertController = UIAlertController(title: "Save picture?", message: "Save this as your public profile picture?", preferredStyle: .alert)
+            //If user clicks post button, post to feed
+            let postAction = UIAlertAction(title: "Save", style: .default) { (action) in
+                let query = PFQuery(className: "User")
+                query.whereKey("username", equalTo:PFUser.current()!.username!)
+                
+                query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+                    if error != nil {
+                        // Log details of the failure
+                        print("Error:", error!.localizedDescription)
+                        
+                        
+                    } else if let objects = objects{
+                        //Create new object
+                        let userInfo = PFObject(className: "User")
+                        
+                        //Saved in a separate table for my photos
+                        let imageData = self.profilePicImgView.image!.pngData()
+                        let file = PFFileObject(data: imageData!)
+                        
+                        //This column has url
+                        userInfo.setObject(file!, forKey: "profilePic")
+                        
+                        userInfo.saveInBackground { (success, error) in
+                            if success{
+                                print("Saved profile pic!")
+                                
+                                //show the new profile pic on page
+                                
+                                
+                            } else {
+                                print("Error! Unable to save profile picture.")
+                                
+                                //Show an error message to user
+                                let alertView = UIAlertView(
+                                    title: "Error",
+                                    message: "Unable to save profile picture. Please try again.",
+                                    delegate: nil,
+                                    cancelButtonTitle: "OK"
+                                )
+                                alertView.show()
+                            }
+                        }
+                
+                    }
+                
+               
+                
+                }
+            }
+            //If user clicks cancel button
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+                //do nothing
+            }
+            alertController.addAction(postAction)
+            alertController.addAction(cancelAction)
+            
+            self.present(alertController, animated: true)
+            
+        }
+    }
+            
+    
+    
     
     
 }
@@ -133,4 +242,5 @@ class AccountFeedViewController: UIViewController, UITableViewDelegate, UITableV
         // Pass the selected object to the new view controller.
     }
     */
+
 
