@@ -3,7 +3,7 @@
 //  ArtsyFartsy
 //
 //  Created by REBEKKA GEEB on 4/30/19.
-//  Copyright © 2019 MICHAEL BENTON. All rights reserved.
+//  Copyright © 2019 MICHAEL BENTON, REBEKKA GEEB. All rights reserved.
 //
 
 import UIKit
@@ -53,7 +53,7 @@ class FollowingPageViewController: UIViewController, UITableViewDelegate, UITabl
         query.order(byDescending: "createdAt")
         
         query.includeKey("userBeingFollowedUsername")
-        query.limit = 20
+        query.limit = 999
         
         query.findObjectsInBackground{ (followed, error) in
             if followed != nil {

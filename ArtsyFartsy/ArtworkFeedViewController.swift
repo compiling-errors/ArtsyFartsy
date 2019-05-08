@@ -3,7 +3,7 @@
 //  ArtsyFartsy
 //
 //  Created by REBEKKA GEEB on 4/10/19.
-//  Copyright © 2019 MICHAEL BENTON. All rights reserved.
+//  Copyright © 2019 MICHAEL BENTON, REBEKKA GEEB. All rights reserved.
 //
 
 import UIKit
@@ -42,7 +42,7 @@ class ArtworkFeedViewController: UIViewController, UITableViewDelegate, UITableV
         query.order(byDescending: "createdAt")
         
         query.includeKey("author")
-        query.limit = 20
+        query.limit = 999
         
         query.findObjectsInBackground{ (posts, error) in
             if posts != nil {
