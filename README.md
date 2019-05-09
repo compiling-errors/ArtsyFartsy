@@ -81,6 +81,7 @@ This app gives a daily drawing prompt, and allows user artwork to be uploaded, s
 **Optional Nice-to-have Stories**
 
 - [x] Following page
+- [x] User profile pictures
 * Customizable user profile page
 * Friend list / Chat with other users
 * Search for artwork / Favorite artwork to find it quickly
