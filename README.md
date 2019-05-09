@@ -2,6 +2,15 @@ https://hackmd.io/B6U3hn3cQC-h_YGBsA_4Hg?both#Wireframes
 
 Group Project - Compiling Errors
 ===
+Sprint 4 Build Progress Gifs:
+
+<img src='' />
+
+Created with: recordit.co
+
+
+
+
 Sprint 3 Build Progress Gifs:
 
 <img src='http://g.recordit.co/qjhzOkbN6M.gif' />
