@@ -50,6 +50,8 @@ class OpenArtworkViewController: UIViewController {
         //Load in likes
         loadLikeCounter()
         
+        showProfilePic()
+        
     }
     
     func loadLikeCounter(){
@@ -216,5 +218,33 @@ class OpenArtworkViewController: UIViewController {
     }
     */
 
-
+    func showProfilePic() {
+        let usertest = artwork?["author"] as! PFUser
+        let authorUsername1 = usertest.objectId!
+        let authorUsername2 = usertest.username!
+        
+        let query = PFQuery(className: "profilePictures")
+        
+        query.whereKey("username", equalTo: authorUsername2)
+        query.getFirstObjectInBackground { (object: PFObject?, error: Error?) in
+            if let error = error {
+                // The query succeeded but no matching result was found
+                print("No profile pic found")
+                
+                
+            } else if let object = object {
+                // The find succeeded.
+                print("Loaded profile pic.")
+                
+                let imageFile = object["profilePic"] as! PFFileObject
+                let urlString = imageFile.url!
+                let url = URL(string: urlString)!
+                
+                self.profileImgView.af_setImage(withURL: url)
+                
+            }
+            
+        }
+    }
+    
 }
