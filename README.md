@@ -10,7 +10,7 @@ Created with: recordit.co
 
 
 
-<img src='' />
+<img src='http://g.recordit.co/VyuZlvkamy.gif' />
 
 Created with: recordit.co
 
