@@ -409,6 +409,10 @@
                                     <action selector="unfollowButton:" destination="zAD-SM-EOP" eventType="touchUpInside" id="LEQ-M3-FDx"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acg-wc-iev">
+                                <rect key="frame" x="41" y="552" width="146" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dxc-YA-MrN"/>
@@ -418,6 +422,7 @@
                         <outlet property="likesLabel" destination="3CP-c4-7TH" id="xkF-vO-8pE"/>
                         <outlet property="moreinfoLabel" destination="cc1-dI-mfY" id="eW2-yx-Osu"/>
                         <outlet property="nameLabel" destination="5oa-TA-zc1" id="9Ss-QL-drP"/>
+                        <outlet property="profileImgView" destination="acg-wc-iev" id="PQe-7t-nTS"/>
                         <outlet property="usernameLabel" destination="85u-8v-7HH" id="VNy-M2-avR"/>
                     </connections>
                 </viewController>

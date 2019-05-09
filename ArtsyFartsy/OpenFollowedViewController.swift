@@ -18,6 +18,7 @@ class OpenFollowedViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var artworkImgView: UIImageView!
     
+    @IBOutlet weak var profileImgView: UIImageView!
     var individualUser: PFObject!
     
     let theRefreshControl = UIRefreshControl()
@@ -41,6 +42,7 @@ class OpenFollowedViewController: UIViewController {
 
         loadLikeCounter()
 
+        showProfilePic()
     }
 
     func loadLikeCounter(){
@@ -157,8 +159,33 @@ class OpenFollowedViewController: UIViewController {
         self.present(alertController, animated: true)
         
     }
+    
+    func showProfilePic() {
+        let theUsername = individualUser?["authorUsername"] as? String
         
-
+        let query = PFQuery(className: "profilePictures")
+        
+        query.whereKey("username", equalTo: theUsername!)
+        query.getFirstObjectInBackground { (object: PFObject?, error: Error?) in
+            if let error = error {
+                // The query succeeded but no matching result was found
+                print("No profile pic found")
+                        
+                
+            } else if let object = object {
+                // The find succeeded.
+                print("Loaded profile pic.")
+                
+                let imageFile = object["profilePic"] as! PFFileObject
+                let urlString = imageFile.url!
+                let url = URL(string: urlString)!
+                
+                self.profileImgView.af_setImage(withURL: url)
+                
+        }
+        
+    }
+    }
 
 //    @IBOutlet var backButton: UIView!
 //    let secondViewController:FollowingPageViewController = SecondViewController()
