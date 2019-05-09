@@ -16,6 +16,10 @@ Created with: recordit.co
 
 
 
+<img src='http://g.recordit.co/cOqoFl7Go8.gif' />
+
+Created with: recordit.co
+
 
 Sprint 3 Build Progress Gifs:
 
