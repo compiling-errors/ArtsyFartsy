@@ -2,6 +2,34 @@ https://hackmd.io/B6U3hn3cQC-h_YGBsA_4Hg?both#Wireframes
 
 Group Project - Compiling Errors
 ===
+Sprint 4 Build Progress Gifs:
+
+<img src='http://g.recordit.co/WrVzFqdVq0.gif' />
+
+Created with: recordit.co
+
+
+
+<img src='http://g.recordit.co/VyuZlvkamy.gif' />
+
+Created with: recordit.co
+
+
+
+<img src='http://g.recordit.co/cOqoFl7Go8.gif' />
+
+Created with: recordit.co
+
+
+Sprint 3 Build Progress Gifs:
+
+<img src='http://g.recordit.co/qjhzOkbN6M.gif' />
+
+Created with: recordit.co
+
+
+
+
 Sprint 2 Build Progress Gifs:
 
 <img src='http://g.recordit.co/fLj3DB3nnf.gif' />
@@ -54,7 +82,7 @@ This app gives a daily drawing prompt, and allows user artwork to be uploaded, s
 
 - [x] A new account can be created
 - [x] Login for account access
-* Daily art prompt
+- [x] Daily art prompt
 - [x] Artwork can be uploaded to the general feed
 - [x] User account page (user artwork displayed on page)
 - [x] Likes can be left on artwork
@@ -62,15 +90,13 @@ This app gives a daily drawing prompt, and allows user artwork to be uploaded, s
 
 **Optional Nice-to-have Stories**
 
-* Following page
+- [x] Following page
+- [x] User profile pictures
 * Customizable user profile page
-* Friend list
-* Chat with other users
-* Search for artwork
-* Favorite artwork to find it quickly
+* Friend list / Chat with other users
+* Search for artwork / Favorite artwork to find it quickly
 * Featured artwork page
 * Monetization
-* Customizable app settings
 
 ### 2. Screen Archetypes
 

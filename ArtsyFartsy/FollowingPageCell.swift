@@ -1,17 +1,20 @@
 //
-//  ComissionPostCell.swift
+//  FollowingPageCell.swift
 //  ArtsyFartsy
 //
-//  Created by REBEKKA GEEB on 4/11/19.
-//  Copyright © 2019 MICHAEL BENTON. All rights reserved.
+//  Created by REBEKKA GEEB on 4/30/19.
+//  Copyright © 2019 MICHAEL BENTON, REBEKKA GEEB. All rights reserved.
 //
 
 import UIKit
 
-class ComissionPostCell: UITableViewCell {
+class FollowingPageCell: UITableViewCell {
     
-    //connect outlets, username , UI Image view
-
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var followedArtworkImgView: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

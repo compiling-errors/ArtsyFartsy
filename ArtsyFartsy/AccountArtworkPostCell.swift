@@ -2,8 +2,8 @@
 //  AccountArtworkPostCell.swift
 //  ArtsyFartsy
 //
-//  Created by Tiny on 4/24/19.
-//  Copyright © 2019 MICHAEL BENTON. All rights reserved.
+//  Created by REBEKKA GEEB on 4/24/19.
+//  Copyright © 2019 MICHAEL BENTON, REBEKKA GEEB. All rights reserved.
 //
 
 import UIKit

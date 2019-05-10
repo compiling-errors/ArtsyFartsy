@@ -3,18 +3,18 @@
 //  ArtsyFartsy
 //
 //  Created by REBEKKA GEEB on 4/24/19.
-//  Copyright © 2019 MICHAEL BENTON. All rights reserved.
+//  Copyright © 2019 MICHAEL BENTON, REBEKKA GEEB. All rights reserved.
 //
 
 import UIKit
 import Parse
 import AlamofireImage
 
-class AccountFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class AccountFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     @IBOutlet weak var currentUsernameLabel: UILabel!
-    
     @IBOutlet weak var accountTableView: UITableView!
+    @IBOutlet weak var profilePicImgView: UIImageView!
     
     var userArtworkPosts = [PFObject]()
     
@@ -34,6 +34,7 @@ class AccountFeedViewController: UIViewController, UITableViewDelegate, UITableV
         theRefreshControl.addTarget(self, action: #selector(refreshArtworkFeed), for: .valueChanged)
         self.accountTableView.refreshControl = theRefreshControl
         
+        showProfilePic()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,7 +48,7 @@ class AccountFeedViewController: UIViewController, UITableViewDelegate, UITableV
         query.order(byDescending: "createdAt")
         
         query.includeKey("author")
-        query.limit = 20
+        query.limit = 999
         
         query.findObjectsInBackground{ (posts, error) in
             if posts != nil {
@@ -88,6 +89,7 @@ class AccountFeedViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
+    
     @IBAction func logoutButton(_ sender: Any) {
         PFUser.logOut()
         
@@ -118,18 +120,157 @@ class AccountFeedViewController: UIViewController, UITableViewDelegate, UITableV
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     
-    
-}
-
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func tapToChangeProfilePic(_ sender: Any) {
+        let artworkPicker = UIImagePickerController()
+        artworkPicker.delegate = self
+        artworkPicker.allowsEditing = true
+        
+        //Uses camera on regular phone, or photolibrary for simulator, prevent crash
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            artworkPicker.sourceType = .camera
+        } else {
+            artworkPicker.sourceType = .photoLibrary
+        }
+        
+        present(artworkPicker, animated: true, completion: nil)
     }
-    */
-
+    
+    //Have user be able to pick photo from camera
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let image = info[.editedImage] as! UIImage
+        
+        //Resize photo
+        let size = CGSize(width: 300, height: 300)
+        let scaledImage = image.af_imageAspectScaled(toFill: size)
+        
+        profilePicImgView.image = scaledImage
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func saveButton(_ sender: Any) {
+        if self.profilePicImgView.image == nil {
+            let alertView = UIAlertView(
+                title: "Error!",
+                message: "Error! Must select a picture to save. Please try again.",
+                delegate: nil,
+                cancelButtonTitle: "OK"
+            )
+            alertView.show()
+            
+        } else {
+            
+            let alertController = UIAlertController(title: "Save picture?", message: "Save this as your public profile picture?", preferredStyle: .alert)
+            
+            let postAction = UIAlertAction(title: "Save", style: .default) { (action) in
+                print("buttonrunning")
+                
+                let query = PFQuery(className:"profilePictures")
+                
+                query.whereKey("username", equalTo: PFUser.current()!.username!)
+                
+                query.getFirstObjectInBackground { (object: PFObject?, error: Error?) in
+                    if let error = error {
+                        // The query succeeded but no matching result was found
+                        
+                        //Create new object
+                        let profilePic = PFObject(className: "profilePictures")
+                        
+                        //Create dictionary
+                        //If you add stuff later, things will be nil: must handle this or delete table and start over again
+                        profilePic["username"] = PFUser.current()!.username!
+                        
+                        
+                        //Saved in a separate table for my photos
+                        let imageData = self.profilePicImgView.image!.pngData()
+                        let file = PFFileObject(data: imageData!)
+                        
+                        //This column has url
+                        profilePic["profilePic"] = file
+                        
+                        profilePic.saveInBackground { (success, error) in
+                            if success{
+                                print("Saved profile pic!")
+                                
+                                //Show a success message to user
+                                let alertView = UIAlertView(
+                                    title: "Saved",
+                                    message: "Success! New profile picture saved.",
+                                    delegate: nil,
+                                    cancelButtonTitle: "OK"
+                                )
+                                alertView.show()
+                                
+                                //  self.profilePicImgView.image = file
+                            } else {
+                                print("Error! Unable to save profile pic.")
+                                
+                                //Show an error message to user
+                                let alertView = UIAlertView(
+                                    title: "Error",
+                                    message: "Unable to save new profile picture. Please try again.",
+                                    delegate: nil,
+                                    cancelButtonTitle: "OK"
+                                )
+                                alertView.show()
+                            }
+                            
+                        }
+                        
+                    } else if let object = object {
+                        //update the existing entry with the new picture
+                        //Saved in a separate table for my photos
+                        let imageData = self.profilePicImgView.image!.pngData()
+                        let file = PFFileObject(data: imageData!)
+                        
+                        object["profilePic"] = file
+                        
+                        object.saveInBackground()
+                        
+                        print("Updated profile pic")
+                    }
+                    
+                    
+                }
+            }
+            //If user clicks cancel button
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+                //do nothing
+            }
+            alertController.addAction(postAction)
+            alertController.addAction(cancelAction)
+            
+            self.present(alertController, animated: true)
+            
+            
+        }
+    }
+    
+    func showProfilePic() {
+        let theUsername = PFUser.current()?.username
+        
+        let query = PFQuery(className: "profilePictures")
+        
+        query.whereKey("username", equalTo: theUsername!)
+        query.getFirstObjectInBackground { (object: PFObject?, error: Error?) in
+            if let error = error {
+                // The query succeeded but no matching result was found
+                print("No profile pic found")
+                
+                
+            } else if let object = object {
+                // The find succeeded.
+                print("Loaded profile pic.")
+                
+                let imageFile = object["profilePic"] as! PFFileObject
+                let urlString = imageFile.url!
+                let url = URL(string: urlString)!
+                
+                self.profilePicImgView.af_setImage(withURL: url)
+                
+            }
+            
+        }
+    }
+}
