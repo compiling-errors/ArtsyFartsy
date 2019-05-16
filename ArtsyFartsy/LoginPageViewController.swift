@@ -74,6 +74,13 @@ class LoginPageViewController: UIViewController {
                 self.performSegue(withIdentifier: "TabBarSegue", sender: nil)
             } else {
                 print("Error: \(error?.localizedDescription)")
+                let alertView = UIAlertView(
+                    title:"Error",
+                    message:"This username is already taken. Please try again.",
+                    delegate: nil,
+                    cancelButtonTitle: "OK"
+                )
+                alertView.show()
             }
         }
     }

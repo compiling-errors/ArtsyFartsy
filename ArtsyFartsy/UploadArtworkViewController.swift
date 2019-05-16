@@ -54,9 +54,9 @@ class UploadArtworkViewController: UIViewController, UIImagePickerControllerDele
                 self.adjectiveLabel.text = something["adjective"] as? String
             }
         }
-      /*  let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UploadArtworkViewController.keyboardDismiss))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UploadArtworkViewController.keyboardDismiss))
         
-        view.addGestureRecognizer(tap)*/
+        view.addGestureRecognizer(tap)
     }
     
     @objc func keyboardDismiss(){
