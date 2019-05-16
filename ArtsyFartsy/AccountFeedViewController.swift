@@ -229,6 +229,14 @@ class AccountFeedViewController: UIViewController, UITableViewDelegate, UITableV
                         object.saveInBackground()
                         
                         print("Updated profile pic")
+                        
+                        let alertView = UIAlertView(
+                            title:"Saved",
+                            message:"Success! New profile picture saved.",
+                            delegate: nil,
+                            cancelButtonTitle: "OK"
+                        )
+                        alertView.show()
                     }
                     
                     

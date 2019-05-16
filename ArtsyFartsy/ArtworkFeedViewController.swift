@@ -42,6 +42,12 @@ class ArtworkFeedViewController: UIViewController, UITableViewDelegate, UITableV
         query.order(byDescending: "createdAt")
         
         query.includeKey("author")
+        query.includeKey("likeCount")
+        query.includeKey("name")
+        query.includeKey("moreinfo")
+        query.includeKey("nounOfDay")
+        query.includeKey("adjectiveOfDay")
+        query.includeKey("verbOfDay")
         query.limit = 999
         
         query.findObjectsInBackground{ (posts, error) in
@@ -64,8 +70,21 @@ class ArtworkFeedViewController: UIViewController, UITableViewDelegate, UITableV
         let artworkPost = artworkPosts[indexPath.row]
         
         let user = artworkPost["author"] as! PFUser
+        let likeLabel = artworkPost["likeCount"]
+        let artworkname = artworkPost["name"]
+        let caption = artworkPost["moreinfo"]
+        let noun = artworkPost["nounOfDay"]
+        let adjective = artworkPost["adjectiveOfDay"]
+        let verb = artworkPost["verbOfDay"]
+        
         
         cell.usernameLabel.text = user.username
+        cell.likeLabel.text = likeLabel as? String
+        cell.titleLabel.text = artworkname as? String
+        cell.captionLabel.text = caption as? String
+        cell.nounLabel.text = noun as? String
+        cell.adjectiveLabel.text = adjective as? String
+        cell.verbLabel.text = verb as? String
         
         //Get image and display it
         let imageFile = artworkPost["image"] as! PFFileObject
@@ -73,6 +92,11 @@ class ArtworkFeedViewController: UIViewController, UITableViewDelegate, UITableV
         let url = URL(string: urlString)!
 
         cell.artworkImgView.af_setImage(withURL: url)
+        /*
+        let imageFile = artworkPost["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        */
         
         return cell
 
