@@ -28,6 +28,7 @@
 		AC00960B22445B0900D20705 /* ArtsyFartsyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00960A22445B0900D20705 /* ArtsyFartsyTests.swift */; };
 		AC00961622445B0900D20705 /* ArtsyFartsyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00961522445B0900D20705 /* ArtsyFartsyUITests.swift */; };
 		ACA14CF72260160900AF943A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA14CF62260160800AF943A /* Assets.xcassets */; };
+		F9AD99CC228DFE470040F468 /* Round Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD99CB228DFE470040F468 /* Round Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		ACA14CF62260160800AF943A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6A62B201392471CA178FCC4 /* Pods_ArtsyFartsyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtsyFartsyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B2152CCF2397006E220B86 /* Pods-ArtsyFartsyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtsyFartsyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtsyFartsyTests/Pods-ArtsyFartsyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F9AD99CB228DFE470040F468 /* Round Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Round Image.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				AC0095F922445B0800D20705 /* Main.storyboard */,
 				AC0095FE22445B0800D20705 /* LaunchScreen.storyboard */,
 				AC00960122445B0800D20705 /* Info.plist */,
+				F9AD99CB228DFE470040F468 /* Round Image.swift */,
 			);
 			path = ArtsyFartsy;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				080F9D69226035ED007E99C0 /* SignUpViewController.swift in Sources */,
 				AC0095F622445B0800D20705 /* AppDelegate.swift in Sources */,
 				2A1EAA5C225F04970075BF12 /* UploadArtworkViewController.swift in Sources */,
+				F9AD99CC228DFE470040F468 /* Round Image.swift in Sources */,
 				2A17B6902271902F0093DDE5 /* AccountArtworkPostCell.swift in Sources */,
 				2AAA8A272279182600355DD0 /* FollowingPageCell.swift in Sources */,
 				2A2093DE2279A7540094F0A7 /* OpenFollowedViewController.swift in Sources */,
