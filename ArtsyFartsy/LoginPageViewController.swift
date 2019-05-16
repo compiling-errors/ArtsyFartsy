@@ -19,6 +19,13 @@ class LoginPageViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginPageViewController.keyboardDismiss))
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func keyboardDismiss(){
+        view.endEditing(true)
     }
     
 
@@ -51,9 +58,16 @@ class LoginPageViewController: UIViewController {
         user.username = usernameField.text
         user.password = passwordField.text
         // add email: user.email = emailField.text
-//        let image = UIImage(named: "user.png")
-//
-//        user["profilePic"] = image
+        
+        //let image = UIImage()
+        //let imageData = image.pngData()
+        //let imageFile = PFFileObject(name:"user.png", data:imageData)
+        
+        //var userPhoto = PFObject(className:"profilePictures")
+        //userPhoto["profilePic"] = imageFile
+        
+        //let profilepic = PFObject(className: "profilePictures")
+        //userPhoto.saveInBackground()
         
         user.signUpInBackground { (success, error) in
             if success {
