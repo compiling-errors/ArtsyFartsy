@@ -2,6 +2,11 @@ https://hackmd.io/B6U3hn3cQC-h_YGBsA_4Hg?both#Wireframes
 
 Group Project - Compiling Errors
 ===
+Final Build Progress Gifs:
+
+https://github.com/compiling-errors/ArtsyPrompts/blob/master/zMFfIfk7hR.gif
+
+
 Sprint 4 Build Progress Gifs:
 
 <img src='http://g.recordit.co/WrVzFqdVq0.gif' />
