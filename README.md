@@ -4,7 +4,7 @@ Group Project - Compiling Errors
 ===
 Final Build Progress Gifs:
 
-https://github.com/compiling-errors/ArtsyPrompts/blob/master/zMFfIfk7hR.gif
+<img src='https://github.com/compiling-errors/ArtsyPrompts/blob/master/zMFfIfk7hR.gif' width='200'/>
 
 
 Sprint 4 Build Progress Gifs:
