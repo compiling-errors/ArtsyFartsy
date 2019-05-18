@@ -1,7 +1,3 @@
-Narrated Video of Final:
-https://www.youtube.com/watch?v=npw8lvFCKDA&feature=youtu.be
-
-
 https://hackmd.io/B6U3hn3cQC-h_YGBsA_4Hg?both#Wireframes
 
 Group Project - Compiling Errors
@@ -10,6 +6,11 @@ Final Build Progress Gifs:
 
 <img src='https://github.com/compiling-errors/ArtsyPrompts/blob/master/zMFfIfk7hR.gif' width='200'/>
 
+
+[![Artsy Prompts Narrative video](https://img.youtube.com/vi/npw8lvFCKDA/0.jpg)](https://www.youtube.com/watch?v=npw8lvFCKDA)
+<url scr='https://youtu.be/npw8lvFCKDA' width='200' />
+https://youtu.be/npw8lvFCKDA
+Link to the Narrative Video.
 
 Sprint 4 Build Progress Gifs:
 
@@ -498,4 +499,3 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 - (Read/Get)- Get the message from another user
 - (Update/Put)- Update the message box.
 ---
-
